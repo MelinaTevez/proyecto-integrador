@@ -60,4 +60,38 @@ body {
   .nav-bar {
     display: none;
   }
+}
+
+/*_____ SEARCH BAR _____ */
+.search-bar {
+  background-color: olivedrab;
+  display: flex;
+  justify-content: space-between;
+}
+.search-bar__logo-container, .search-bar__form-container {
+  padding: 1em;
+}
+.search-bar__logo-container {
+  background-color: yellow;
+}
+.search-bar__form-container {
+  background-color: gold;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+}
+.search-bar__form-label {
+  background-color: greenyellow;
+}
+.search-bar__form-search {
+  background-color: deeppink;
+  width: 70%;
+}
+.search-bar__form-submit {
+  background-color: darkslategray;
+  color: white;
+}
+.search-bar__carrito-container {
+  flex: 0 0 3em;
+  background-color: goldenrod;
 }/*# sourceMappingURL=main.css.map */
