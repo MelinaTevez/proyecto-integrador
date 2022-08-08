@@ -2,7 +2,8 @@
 
 .main-header {
     display: flex;
-    flex-direction: column;
+   /*  flex-direction: column; */
+   height: 12vh;
 }
 
 #menu {
@@ -20,7 +21,8 @@
 /*_____ NAV BAR _____ */
 
 .nav-bar {
-    background-color: mediumaquamarine;
+    /* background-color: mediumaquamarine; */
+    background-color: white;
 
     &__nav-list {
         display: flex;

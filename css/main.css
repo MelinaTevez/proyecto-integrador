@@ -15,10 +15,17 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+/* $colorBase: white;          (blanco)
+$colorTipografia: black;       (negro)
+$colorPrimario: #D074FF;       (lila)
+$colorSecundario:#AD5ED6;      (violeta)
+$colorTerciario: #ED93EC;      (rosa)
+$colorCuaternario: #F8D5F8;    (rosa claro) */
 /*_____ HEADER _____ */
 .main-header {
   display: flex;
-  flex-direction: column;
+  /*  flex-direction: column; */
+  height: 12vh;
 }
 
 #menu {
@@ -33,7 +40,8 @@ body {
 
 /*_____ NAV BAR _____ */
 .nav-bar {
-  background-color: mediumaquamarine;
+  /* background-color: mediumaquamarine; */
+  background-color: white;
 }
 .nav-bar__nav-list {
   display: flex;
