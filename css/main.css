@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Rubik:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -11,8 +11,14 @@ body {
   box-sizing: border-box;
 }
 
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 body {
-  font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
+} */
+body {
+  font-family: "Oswald", sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 /* $colorBase: white;          (blanco)
@@ -26,6 +32,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   display: flex;
   /*  flex-direction: column; */
   height: 12vh;
+  font-family: "Oswald", sans-serif;
 }
 
 #menu {
@@ -42,6 +49,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .nav-bar {
   /* background-color: mediumaquamarine; */
   background-color: white;
+  font-size: 25px;
 }
 .nav-bar__nav-list {
   display: flex;
@@ -55,13 +63,15 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .nav-bar__nav-item {
   text-align: center;
-  background-color: pink;
+  /* background-color: pink; */
+  height: 12vh;
 }
 .nav-bar__nav-link {
   display: block;
-  background-color: purple;
-  color: #fff;
-  padding: 1em 2em;
+  /* background-color: purple; */
+  /* color: #fff; */
+  color: black;
+  padding: 1em;
   text-decoration: none;
 }
 @media (max-width: 768px) {
@@ -80,7 +90,12 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   padding: 1em;
 }
 .search-bar__logo-container {
-  background-color: yellow;
+  /* background-color: yellow; */
+  background-image: url(../../img/productos/logo-juanamari.png);
+  background-repeat: no-repeat;
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 .search-bar__form-container {
   background-color: gold;
@@ -89,7 +104,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   justify-content: center;
 }
 .search-bar__form-label {
-  background-color: greenyellow;
+  display: none;
+  /*  background-color: greenyellow; */
 }
 .search-bar__form-search {
   background-color: deeppink;

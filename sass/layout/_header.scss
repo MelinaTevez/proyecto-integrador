@@ -4,6 +4,7 @@
     display: flex;
    /*  flex-direction: column; */
    height: 12vh;
+   font-family: 'Oswald', sans-serif;
 }
 
 #menu {
@@ -22,7 +23,8 @@
 
 .nav-bar {
     /* background-color: mediumaquamarine; */
-    background-color: white;
+    background-color: $colorBase;
+    font-size: 25px;
 
     &__nav-list {
         display: flex;
@@ -38,14 +40,16 @@
 
     &__nav-item {
         text-align: center;
-        background-color: pink;
+        /* background-color: pink; */
+        height: 12vh;
     }
 
     &__nav-link {
         display: block;
-        background-color: purple;
-        color: #fff;
-        padding: 1em 2em;
+        /* background-color: purple; */
+        /* color: #fff; */
+        color:$colorTipografia;
+        padding: 1em;
         text-decoration: none;
     }
 
@@ -69,7 +73,13 @@
     }
 
     &__logo-container {
-        background-color: yellow;
+        /* background-color: yellow; */
+        background-image: url(../../img/productos/logo-juanamari.png);
+        background-repeat: no-repeat;
+        width: 30vw;
+        margin-left: auto;
+        margin-right: auto;
+
     }
 
     &__form-container {
@@ -80,7 +90,8 @@
     }
 
     &__form-label {
-        background-color: greenyellow;
+        display: none;
+       /*  background-color: greenyellow; */
     }
 
     &__form-search {
