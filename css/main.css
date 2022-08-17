@@ -350,4 +350,14 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   .card__description {
     font-size: 16px;
   }
+}
+
+.search-bar__logo-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-bar__logo-container {
+  margin-left: auto;
+  margin-right: auto;
 }/*# sourceMappingURL=main.css.map */
