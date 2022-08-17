@@ -1,13 +1,53 @@
 .section-cards {
-    background-color: #f1f2f3;
-    padding: 1em;
+/*     background-color: #f1f2f3; */
+    background-color: $colorBase;
+ /*    padding: 1em; */
+
+    &__header h1{
+        font-size: 80px;
+        color: $colorTipografia ;
+        -webkit-text-stroke: 2px $colorCuaternario;
+        font-family: 'Oswald', sans-serif;;
+        background-image: url(../../img/otras-img/accesorios-img.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 40vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 3%;
+    }
+
+    &__header p{
+        padding: 10px;
+        font-size: 30px;
+        background-color: $colorCuaternario;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        &__header h1{
+           font-size: 45px;
+           height: 30vh;
+           -webkit-text-stroke: 1px $colorCuaternario;
+        }
+    
+        &__header p{
+            font-size: 22px;
+        }
+    }
+     
+
 }
+
 
 .cards-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
     justify-content: center;
+    background-color: $colorBase;
 
     @media (min-width: 1200px) {
         & {
