@@ -4,3 +4,103 @@
         margin-right: auto;
     }
 }
+
+.main-contacto h1{
+    font-size: 40px;
+    text-align: center;
+    color: $colorTipografia;
+    letter-spacing: 5px;
+    margin: 20px;
+
+    @media (max-width: 768px) {
+        font-size: 30px;
+        letter-spacing: 0;
+    }
+}
+
+.form-contacto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    &__motivo,
+    &__informacion,
+    &__comentario{
+        border: 2px solid $colorTipografia;
+        border-radius: 15px;
+        margin: 20px;
+        width: 70vw;
+    }
+
+    & h2{
+        font-size: 30px;
+        text-transform: uppercase;
+        background-color: #D074FF;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        padding-left: 5%;
+    }
+
+    & label, 
+    & input,
+    & legend{
+        display: block;
+        margin: 10px;
+        margin-left: 8%;
+        font-size: 20px;
+    }
+
+    &__motivo label{
+        display: inline;
+    }
+
+    &__motivo select{
+        margin: 20px;
+    }
+
+    &__informacion legend{
+        font-weight: 700;
+    }
+    &__comentario textarea{
+        margin: 10px;
+    }
+
+    & button{
+        background-color: $colorTipografia;
+        color: $colorTerciario;
+        font-size: 30px;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 20px;
+    }
+
+    @media (max-width: 768px) {
+        margin-left: 0;
+        margin-right: 0;
+    
+        &__motivo,
+        &__informacion,
+        &__comentario{
+            border: 1px solid $colorTipografia;
+            margin: 5px;
+            width: 90vw;
+        }
+    
+        & h2{
+            font-size: 20px;
+        }
+    
+        & label, 
+        & input,
+        & legend{
+            font-size: 18px;
+        }
+
+        & button{
+            font-size: 22px;
+        }
+    }
+}
