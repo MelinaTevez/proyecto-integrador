@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@400;700&display=swap");
 *,
 *::before,
@@ -355,6 +356,49 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .search-bar__logo-container {
   margin-left: auto;
   margin-right: auto;
+}
+
+.nosotros-section {
+  /*----- NOSOTROS HEADER -----*/
+  /*----- NOSOTROS MISIÓN -----*/
+}
+.nosotros-section__header h1 {
+  font-size: 80px;
+  color: #141414;
+  letter-spacing: 5px;
+  height: 40vh;
+  background-image: url("../../img/otras-img/nosotros-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3%;
+}
+.nosotros-section__header p {
+  font-size: 22px;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+@media (max-width: 768px) {
+  .nosotros-section__header h1 {
+    font-size: 30px;
+    height: 30vh;
+  }
+  .nosotros-section__header p {
+    font-size: 18px;
+    padding: 1em;
+  }
+}
+.nosotros-section__mision {
+  height: 40vh;
+  background-color: #F8D5F8;
+  display: flex;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 .search-bar__logo-container {
