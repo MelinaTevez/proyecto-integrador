@@ -514,6 +514,25 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   box-shadow: 0 1px 10px #AD5ED6;
   transition: height 1s;
 }
+@media (max-width: 768px) {
+  .nosotros-section__estilo {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  .nosotros-section__estilo h2 {
+    font-size: 60px;
+    padding: 20px;
+  }
+  .nosotros-section__estilo img {
+    height: 25vh;
+    margin: 15px;
+  }
+  .nosotros-section__estilo img:hover {
+    height: 25vh;
+  }
+}
 
 .search-bar__logo-container {
   margin-left: auto;

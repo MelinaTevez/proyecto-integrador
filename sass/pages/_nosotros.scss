@@ -197,4 +197,25 @@
         transition: height 1s;
     }
 
+    @media (max-width: 768px) {
+        &__estilo{
+            height: fit-content;
+            flex-wrap: wrap;
+        }
+    
+        &__estilo h2{
+            font-size: 60px;
+            padding: 20px;
+        }
+    
+        &__estilo img{
+            height: 25vh;
+            margin: 15px;
+        }
+
+        &__estilo img:hover{
+            height: 25vh;
+        }
+    }
+
 }
