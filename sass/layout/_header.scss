@@ -24,10 +24,9 @@
 /*_____ NAV BAR _____ */
 
 .nav-bar {
-    /* background-color: mediumaquamarine; */
+
     background-color: $colorSecundario;
     order: 1;
-/*     font-size: 25px; */
 
     &__nav-list {
         display: flex;
@@ -43,15 +42,12 @@
 
     &__nav-item {
         text-align: center;
-        /* background-color: pink; */
-      /*   height: 12vh; */
     }
 
     &__nav-link {
         display: block;
-        /* background-color: purple; */
-        /* color: #fff; */
         color:$colorTipografia;
+        font-size: 20px;
         padding: 0.5em 2em;
         text-decoration: none;
     }
@@ -60,38 +56,35 @@
         color:$colorBase;
         text-decoration: underline;
     }
-
+    
     @media (max-width: 768px) {
         & {
             display: none;
             background-color: $colorSecundario;
         }
+        &__nav-link {
+            font-size: 18px;
+        }
     }
+
 }
 
 /*_____ SEARCH BAR _____ */
 
 .search-bar {
-/*     background-color: olivedrab; */
+
     background-color: $colorPrimario;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
-/*     &__logo-container, */
     &__form-container {
         padding: 1em;
     }
 
     &__logo-container {
-        /* background-color: yellow; */
-     /*    background-image: url(../../img/productos/logo-juanamari.png); */
-        /* background-repeat: no-repeat;
-        width: 30vw;
-        margin-left: auto;
-        margin-right: auto;
- */
         background-color: $colorPrimario;
-        margin-left: 10%;
+        margin-left: 10%; 
+        margin-right: 10%;
         height: auto;
         width: auto;
     }
@@ -102,7 +95,6 @@
     }
 
     &__form-container {
-   /*      background-color: gold; */
         background-color: $colorPrimario;
         display: flex;
         flex-basis: 100%;
@@ -110,9 +102,8 @@
     }
 
     &__form-label {
-       /*  display: none; */
-       /*  background-color: greenyellow; */
        font-family: 'Montserrat', sans-serif;
+       font-size: 22px;
        font-weight: 700;
        background-color: $colorPrimario;
        color: $colorBase;

@@ -1,9 +1,9 @@
-.search-bar {
+/* .search-bar {
     &__logo-container {
         margin-left: auto;
         margin-right: auto;
     }
-}
+} */
 
 .main-contacto h1{
     font-size: 40px;
@@ -65,7 +65,9 @@
         font-weight: 700;
     }
     &__comentario textarea{
-        margin: 10px;
+        margin: 10px; 
+        width: 60vw;
+        height: 10vh;
     }
 
     & button{

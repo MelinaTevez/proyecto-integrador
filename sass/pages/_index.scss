@@ -1,21 +1,17 @@
 .section-cards {
-/*     background-color: #f1f2f3; */
     background-color: $colorBase;
- /*    padding: 1em; */
+
 
     &__header h1{
-        font-size: 80px;
+        font-size: 70px;
         color: $colorTipografia ;
-        -webkit-text-stroke: 2px $colorCuaternario;
-        font-family: 'Oswald', sans-serif;;
-        background-image: url(../../img/otras-img/accesorios-img.jpg);
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: cover;
-        height: 40vh;
+        background-color: $colorCuaternario;
+        letter-spacing: 5px;
+        text-shadow:0 0 10px $colorSecundario;
+        height: 20vh;
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
+        justify-content: center;
+        align-items:center;
         padding: 3%;
     }
 
@@ -28,9 +24,9 @@
 
     @media (max-width: 768px) {
         &__header h1{
-           font-size: 45px;
-           height: 30vh;
-           -webkit-text-stroke: 1px $colorCuaternario;
+           font-size: 40px;
+           height: 20vh;
+           letter-spacing: 0;
         }
     
         &__header p{

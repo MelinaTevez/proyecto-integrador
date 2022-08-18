@@ -50,10 +50,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 
 /*_____ NAV BAR _____ */
 .nav-bar {
-  /* background-color: mediumaquamarine; */
   background-color: #D074FF;
   order: 1;
-  /*     font-size: 25px; */
 }
 .nav-bar__nav-list {
   display: flex;
@@ -67,14 +65,11 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .nav-bar__nav-item {
   text-align: center;
-  /* background-color: pink; */
-  /*   height: 12vh; */
 }
 .nav-bar__nav-link {
   display: block;
-  /* background-color: purple; */
-  /* color: #fff; */
   color: #141414;
+  font-size: 20px;
   padding: 0.5em 2em;
   text-decoration: none;
 }
@@ -87,29 +82,24 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     display: none;
     background-color: #D074FF;
   }
+  .nav-bar__nav-link {
+    font-size: 18px;
+  }
 }
 
 /*_____ SEARCH BAR _____ */
 .search-bar {
-  /*     background-color: olivedrab; */
   background-color: #AD5ED6;
   display: flex;
-  justify-content: space-between;
-  /*     &__logo-container, */
+  justify-content: space-around;
 }
 .search-bar__form-container {
   padding: 1em;
 }
 .search-bar__logo-container {
-  /* background-color: yellow; */
-  /*    background-image: url(../../img/productos/logo-juanamari.png); */
-  /* background-repeat: no-repeat;
-         width: 30vw;
-         margin-left: auto;
-         margin-right: auto;
-  */
   background-color: #AD5ED6;
   margin-left: 10%;
+  margin-right: 10%;
   height: auto;
   width: auto;
 }
@@ -118,16 +108,14 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   width: auto;
 }
 .search-bar__form-container {
-  /*      background-color: gold; */
   background-color: #AD5ED6;
   display: flex;
   flex-basis: 100%;
   justify-content: center;
 }
 .search-bar__form-label {
-  /*  display: none; */
-  /*  background-color: greenyellow; */
   font-family: "Montserrat", sans-serif;
+  font-size: 22px;
   font-weight: 700;
   background-color: #AD5ED6;
   color: #fff8f8;
@@ -242,23 +230,18 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 
 .section-cards {
-  /*     background-color: #f1f2f3; */
   background-color: #fff8f8;
-  /*    padding: 1em; */
 }
 .section-cards__header h1 {
-  font-size: 80px;
+  font-size: 70px;
   color: #141414;
-  -webkit-text-stroke: 2px #F8D5F8;
-  font-family: "Oswald", sans-serif;
-  background-image: url(../../img/otras-img/accesorios-img.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-  height: 40vh;
+  background-color: #F8D5F8;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px #D074FF;
+  height: 20vh;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   padding: 3%;
 }
 .section-cards__header p {
@@ -269,9 +252,9 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 @media (max-width: 768px) {
   .section-cards__header h1 {
-    font-size: 45px;
-    height: 30vh;
-    -webkit-text-stroke: 1px #F8D5F8;
+    font-size: 40px;
+    height: 20vh;
+    letter-spacing: 0;
   }
   .section-cards__header p {
     font-size: 22px;
@@ -353,11 +336,13 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   }
 }
 
-.search-bar__logo-container {
-  margin-left: auto;
-  margin-right: auto;
+/* .search-bar {
+    &__logo-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
-
+ */
 .nosotros-section {
   /*----- NOSOTROS HEADER -----*/
   /*----- NOSOTROS MISIÓN -----*/
@@ -608,11 +593,12 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   }
 }
 
-.search-bar__logo-container {
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* .search-bar {
+    &__logo-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+} */
 .main-contacto h1 {
   font-size: 40px;
   text-align: center;
@@ -666,6 +652,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .form-contacto__comentario textarea {
   margin: 10px;
+  width: 60vw;
+  height: 10vh;
 }
 .form-contacto button {
   background-color: #141414;
