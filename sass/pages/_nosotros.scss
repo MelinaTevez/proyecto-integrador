@@ -1,27 +1,28 @@
-/* .search-bar {
+.search-bar {
     &__logo-container {
         margin-left: auto;
         margin-right: auto;
     }
 }
- */
+
 .nosotros-section{
 
      /*----- NOSOTROS HEADER -----*/
 
     &__header h1{
-        font-size: 80px;
+        font-size: 60px;
         color:$colorTipografia;
+        background-color: $colorCuaternario;
         letter-spacing: 5px;
-        height: 40vh;
-        background-image: url(../../img/otras-img/nosotros-img.jpg);
+        height: 30vh;
+        /* background-image: url(../../img/otras-img/nosotros-img.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: 50% 50%;
+        background-position: 50% 50%; */
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 3%;
+        padding: 3%; 
     }
 
     &__header p {
@@ -106,7 +107,7 @@
 
     &__historia{
         height: 40vh;
-        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.404),rgba(128, 128, 128, 0.5)), url(../../img/otras-img/historia-img.webp);
+        background-image: linear-gradient(to right, rgba(92, 17, 88, 0.562),rgba(89, 34, 110, 0.5),rgb(27, 25, 25));/*  url(../../img/otras-img/historia-img.webp); */
         background-repeat: no-repeat;
         background-position: 50% 50%; 
         background-size: cover;
@@ -120,7 +121,7 @@
 
     &__historia h2,
     &__historia p {
-        background-color: rgb(8, 8, 8);
+        background-color:$colorTipografia;
         color: $colorBase;
         width: 50vw;
         padding: 10px;
@@ -141,18 +142,21 @@
 
     @media (max-width: 768px) {
         &__historia{
-            height: 50vh;
+            height: fit-content;
             background-size: auto;
+    
         }
     
         &__historia h2,
         &__historia p {
             width: 60vw;
             height: 35vh;
+
         }
     
         &__historia h2{
             font-size: 38px;
+            height: fit-content;
         }
     
         &__historia p {
@@ -163,7 +167,7 @@
     /*----- NOSOTROS ENCOTRA TU ESTILO -----*/
 
     &__estilo{
-        height: 60vh;
+        height: 50vh;
         background-color: $colorTerciario;
         font-family: "Oswald", sans-serif;
         text-align: center;
@@ -179,6 +183,10 @@
         color: $colorPrimario;
         font-size: 90px;
         padding: 40px;
+        position: absolute;
+        color: $colorBase;
+        letter-spacing: 15px;
+        text-shadow:0 0 8px black;
     }
 
     &__estilo img{
@@ -186,10 +194,6 @@
         margin: 10px;
     }
 
-    &__estilo-img1,
-    &__estilo-img2 {
-        order:-1;
-    }
 
     &__estilo img:hover{
         height: 48vh;
@@ -204,13 +208,14 @@
         }
     
         &__estilo h2{
-            font-size: 60px;
+            font-size: 50px;
             padding: 20px;
+            letter-spacing: 5px;
         }
     
         &__estilo img{
             height: 25vh;
-            margin: 15px;
+            margin: 5px;
         }
 
         &__estilo img:hover{
@@ -219,7 +224,7 @@
     }
 
     &__locales-titulo{
-        height: 50vh;
+        height: 20vh;
         background-color: $colorPrimario;
         text-align: center;
         display: flex;
@@ -227,10 +232,11 @@
         align-items: center;
         margin-top: 5%;
     }
-
+    
     &__locales-titulo h2{
-        font-size: 100px;
-        color: $colorCuaternario;
+        font-size: 80px;
+        color: $colorTipografia;
+
     }
 
     &__locales-titulo a{

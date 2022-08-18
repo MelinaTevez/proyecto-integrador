@@ -3,12 +3,13 @@
 
 
     &__header h1{
-        font-size: 70px;
+        font-size: 60px;
         color: $colorTipografia ;
         background-color: $colorCuaternario;
         letter-spacing: 5px;
-        text-shadow:0 0 10px $colorSecundario;
-        height: 20vh;
+        text-transform: uppercase;
+   /*      text-shadow:0 0 10px $colorSecundario; */
+        height: 30vh;
         display: flex;
         justify-content: center;
         align-items:center;
@@ -18,7 +19,7 @@
     &__header p{
         padding: 10px;
         font-size: 30px;
-        background-color: $colorCuaternario;
+ /*        background-color: $colorCuaternario; */
         margin: 0;
     }
 

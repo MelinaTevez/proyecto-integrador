@@ -1,16 +1,20 @@
-/* .search-bar {
+.search-bar {
     &__logo-container {
         margin-left: auto;
         margin-right: auto;
     }
-} */
+}
 
 .main-contacto h1{
     font-size: 40px;
     text-align: center;
     color: $colorTipografia;
     letter-spacing: 5px;
-    margin: 20px;
+    background-color: $colorCuaternario;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 768px) {
         font-size: 30px;
