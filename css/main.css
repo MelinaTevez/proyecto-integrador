@@ -367,7 +367,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   color: #141414;
   letter-spacing: 5px;
   height: 40vh;
-  background-image: url("../../img/otras-img/nosotros-img.jpg");
+  background-image: url(../../img/otras-img/nosotros-img.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -404,7 +404,6 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   height: 40vh;
 }
 .nosotros-section__mision-texto {
-  /*      text-align: center; */
   font-family: "Oswald", sans-serif;
   margin-left: auto;
   margin-right: auto;
