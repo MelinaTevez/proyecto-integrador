@@ -22,26 +22,28 @@
         justify-content: center;
         align-items: center;
         padding: 3%;
-
-        &__& p {
-            font-size: 22px;
-            padding-top: 2em;
-            padding-bottom: 2em;
-            padding-left: 3em;
-            padding-right: 3em;
-        }
     }
+
+    &__header p {
+        font-size: 22px;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+    
 
     @media (max-width: 768px) {
         &__header h1{
             font-size: 30px;
             height: 30vh;
-
-            &__& p {
-                font-size: 18px;
-                padding: 1em;
-            }
         }
+
+        &__header p {
+            font-size: 18px;
+            padding: 1em;
+        }
+    
     }
 
     /*----- NOSOTROS MISIÓN -----*/
@@ -54,19 +56,54 @@
         margin-bottom: 3%;
     }
 
-        
-    &__& h2{
-            color: $colorSecundario;
-            font-size: 70px;
-            padding: 10px;
-            
-            
-        }
-        &__mision-img{
-                height: 40vh;
-            
-
+    &__mision-img img{
+        height: 40vh;
     }
+
+    &__mision-texto{
+   /*      text-align: center; */
+        font-family: "Oswald", sans-serif;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__mision-texto h2{
+        color: $colorSecundario;
+        font-size: 70px;
+        padding: 10px;
+    }
+
+    &__mision-texto p{
+        font-size: 20px;
+        width:60vw ;
+    }
+  
+    @media (max-width: 768px) {
+        &__mision{
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+    
+        &__mision-img img{
+            width: 100%;
+        }
+    
+        &__mision-texto h2{
+            text-align: center; 
+            font-size: 40px;
+        }
+    
+        &__mision-texto p{
+            font-size: 16px;
+            width:80vw;
+            padding: 10px;
+        }
+    
+    }
+        
+
     
 
 }
