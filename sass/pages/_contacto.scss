@@ -55,6 +55,7 @@
         margin: 10px;
         margin-left: 8%;
         font-size: 20px;
+        font-weight: 700;
     } 
 
     &__motivo label{
@@ -65,8 +66,16 @@
         margin: 20px;
     }
 
-    &__informacion legend{
-        font-weight: 700;
+   /*  &__informacion legend{
+    } */
+
+    &__informacion-preferencia{
+        display: flex;
+        flex-direction: row;
+    }
+    &__informacion-preferencia label{
+        font-weight: 100;
+
     }
 
     &__comentario textarea{

@@ -320,8 +320,9 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   text-transform: uppercase;
 }
 .card__description {
-  padding: 0.5em;
-  font-size: 18px;
+  padding: 0.8em;
+  font-size: 16px;
+  text-align: start;
 }
 @media (min-width: 1024px) {
   .card {
@@ -333,7 +334,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     font-size: 20px;
   }
   .card__description {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -347,6 +348,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   /*----- NOSOTROS MISIÓN -----*/
   /*----- NOSOTROS HISTORIA -----*/
   /*----- NOSOTROS ENCOTRA TU ESTILO -----*/
+  /*----- NOSOTROS LOCALES -----*/
 }
 .nosotros-section__header h1 {
   font-size: 60px;
@@ -529,34 +531,16 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   height: 20vh;
   background-color: #AD5ED6;
   text-align: center;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   margin-top: 5%;
 }
 .nosotros-section__locales-titulo h2 {
   font-size: 80px;
   color: #141414;
 }
-.nosotros-section__locales-titulo a {
-  position: relative;
+.nosotros-section__locales-mapa {
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-.nosotros-section__locales-titulo img {
-  height: 48vh;
-  border: 2px solid rgb(78, 75, 75);
-  border-radius: 10px;
-}
-.nosotros-section__locales-titulo p {
-  position: absolute;
-  color: #141414;
-  font-size: 25px;
-  font-weight: 700;
-}
-.nosotros-section__locales-titulo p:hover {
-  text-decoration: underline;
+  margin: 0.5em;
 }
 @media (max-width: 768px) {
   .nosotros-section__locales-titulo {
@@ -577,9 +561,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .nosotros-section__locales-informacion {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  width: 45vw;
+  width: 40vw;
   background-color: #F8D5F8;
   margin-left: auto;
   margin-right: auto;
@@ -630,6 +613,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   flex-direction: column;
   margin-left: 10%;
   margin-right: 10%;
+  /*  &__informacion legend{
+   } */
 }
 .form-contacto__motivo, .form-contacto__informacion, .form-contacto__comentario {
   border: 2px solid #141414;
@@ -650,6 +635,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin: 10px;
   margin-left: 8%;
   font-size: 20px;
+  font-weight: 700;
 }
 .form-contacto__motivo label {
   display: inline;
@@ -657,8 +643,12 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .form-contacto__motivo select {
   margin: 20px;
 }
-.form-contacto__informacion legend {
-  font-weight: 700;
+.form-contacto__informacion-preferencia {
+  display: flex;
+  flex-direction: row;
+}
+.form-contacto__informacion-preferencia label {
+  font-weight: 100;
 }
 .form-contacto__comentario textarea {
   margin: 10px;
