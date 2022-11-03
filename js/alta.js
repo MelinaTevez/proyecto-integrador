@@ -1,4 +1,6 @@
-const productos = []
+const productos = [
+    {nombre: 'Reloj', proecio: '12423', stock: '35', marca: 'Seiko', categoria:'despertador', detalles:'analogico', foto: '', envio: false}
+]
 
 const inputs = document.querySelectorAll('input')
 const form = document.querySelector('form')
@@ -91,7 +93,8 @@ form.addEventListener('submit', e => {
     button.disabled = true
 
    // renderProdsObjetos()
-    renderProdsTemplateString()
+    //renderProdsTemplateString()
+    renderProds()
 })
 
 //me permite dibujar los productos
@@ -145,3 +148,24 @@ const renderProdsTemplateString = () => {
 
     document.getElementById('listado-productos').innerHTML = html
 }
+
+const renderProds = () => {
+
+    const xhr = new XMLHttpRequest
+    xhr.open('get', 'plantillas/listado.hbs')
+    xhr.addEventListener('load', () => {
+        if(xhr.status === 200){
+            let plantillaHbs = xhr.response
+            console.log(plantillaHbs)
+
+            let template = Handlebars.compile(plantillaHbs)
+            console.log(template)
+
+            let html = template({productos: productos})
+
+            document.getElementById('listado-productos').innerHTML = html
+        }
+    })
+    xhr.send()
+}
+//renderProds()
