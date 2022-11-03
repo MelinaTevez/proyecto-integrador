@@ -1,3 +1,5 @@
+function initInicio(){
+    console.warn('initInicio()')
 
    function Card(heading, description, image) {
         // Propiedades/Atributos
@@ -115,3 +117,5 @@
     for (const unaCard of cards) {
         unaCard.appendTo(elemCardsContainer)
     }
+
+}

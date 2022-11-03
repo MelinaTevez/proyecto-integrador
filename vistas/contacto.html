@@ -1,0 +1,69 @@
+
+<main class="main-contacto">
+    <h1>CONTACTATE CON NOSOTROS!</h1>
+    <form action="" class="form-contacto">
+        <div class="form-contacto__motivo">
+            <h2>Motivo de tu consulta</h2>
+            <label for="motivo">Selecciona un motivo:</label>
+            <select name="motivo" id="motivo">
+                <option value="cambios-devoluciones">Cambios o devoluciones</option>
+                <option value="envio-pedido">Envió de pedido</option>
+                <option value="no-recibi-mi-pedido">Aún no he recibido mi pedido</option>
+                <option value="stock">Disponibilidad de Stock</option>
+                <option value="promociones">Promociones</option>
+                <option value="agradecimientos">Agradecimientos</option>
+                <option value="otro">Otras consultas</option>
+            </select>
+        </div>
+        <div class="form-contacto__informacion">
+            <h2>Información de contacto</h2>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido">
+            <label for="email">Dirección de correo electrónico</label>
+            <input type="email" name="email" id="email">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" name="telefono" id="telefono">
+        
+            <legend>¿Cómo preferís que te contactemos?</legend>
+            <div class="form-contacto__informacion-preferencia">
+                <input type="radio" name="radio" id="correo">
+                <label for="correo">Correo Electronico</label>
+            </div>
+            <div class="form-contacto__informacion-preferencia">
+                <input type="radio" name="radio" id="tel">
+                <label for="tel">Teléfono</label>
+            </div>
+            <div class="form-contacto__informacion-preferencia">
+                <input type="radio" name="radio" id="no-contactarme">
+                <label for="no-contactarme">No contactarme con respecto a este asunto</label>
+            </div>   
+        </div>
+        <div class="form-contacto__comentario">
+            <h2>Escribe tu comentario</h2>
+            <textarea name="comentario" id="comentario">Escribe aquí tu comentario...</textarea>
+        </div>
+
+        <button>Enviar</button>
+    </form>
+</main>
+<footer class="footer">
+    <div class="footer__seguinos">
+        <h4>Seguinos en:</h4>
+        <a href="https://www.instagram.com" target="_blank"> <img src="img/svg/instagram.svg" alt="Instagram Icon"></a>
+        <a href="https://www.youtube.com" target="_blank"> <img src="img/svg/youtube.svg" alt="Youtube Icon"></a>
+        <a href="https://twitter.com" target="_blank"> <img src="img/svg/twitter.svg" alt="Twitter Icon"></a>
+        <a href="https://www.facebook.com" target="_blank"> <img src="img/svg/facebook.svg" alt="Facebook Icon"></a>
+        <a href="https://ar.pinterest.com" target="_blank"><img src="img/svg/pinterest.svg" alt="Pinterest Icon"></a>
+    </div>
+    <div class="footer__newsletter">
+        <h4>NEWSLETTER</h4>
+        <p>Suscribite a nuestro NEWSLETTER  para conocer todas la novedades y obtener asombrosos descuentos TODAS las semanas!</p>
+        <form action="" class="footer__newsletter-form">
+            <input type="email" placeholder="Ingresa tu email">
+            <button>Quiero Registrarme</button>
+        </form>
+    </div>
+</footer>
