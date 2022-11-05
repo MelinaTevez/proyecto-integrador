@@ -841,4 +841,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .section-carrito--visible {
   display: block;
+}
+
+.active {
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

@@ -17,6 +17,14 @@ function start(){
         return 'vistas/' + id + '.html'
     }
 
+    function marcarLink(id) {
+        const links = document.querySelectorAll('header nav a')
+        links.forEach( link => {
+            if(link.id === id) link.classList.add('active')
+            else link.classList.remove('active')
+        })
+    }
+
     function initJS(id) {
         if( id === 'alta' ) {
             initAlta()
@@ -56,6 +64,7 @@ function start(){
         /* CARGA INICIAL DE LA VISTA DETERMINADA POR LA URL VISITADA */
 
         let id = location.hash.slice(1) || 'inicio' // #inicio => slice(1) => inicio
+        marcarLink(id)
         cargarPlantilla(id)
 
         /* CARGA DE CADA UNO DE LOS CONTENIDOS SEGUN LA NAVEGACION LOCAL */
@@ -77,6 +86,7 @@ function start(){
             console.log('Cambió la URL')
 
             let id = location.hash.slice(1) || 'inicio'
+            marcarLink(id)
             cargarPlantilla(id)
         }) 
 
