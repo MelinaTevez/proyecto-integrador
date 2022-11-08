@@ -88,20 +88,31 @@ function leerProductoIngresado(){
     }
 }
 
+ // Limpiamos los imputs del formulario
+ function limpiarFormulario() {
+    inputs.forEach(input => {
+        if (input.type != 'checkbox') input.value = ''
+        else if(input.type == 'checkbox') input.checked = false
+    })
+
+    button.disabled = true
+    camposValidos = [false, false, false, false, false, false, false]
+  }
+
+
+
 
 /* -------- INICIACIONES PARA EL FUNCIONAMIENTO DEL MÓDULO  -------- */
 
 function initAlta(){
     console.warn('initAlta()')
 
-    const inputs = document.querySelectorAll('main form input')
-    const form = document.querySelector('main form')
-    const button = document.querySelector('main form button')
+    inputs = document.querySelectorAll('main form input')
+    form = document.querySelector('main form')
+    button = document.querySelector('main form button')
     
     button.disabled = true
-    
-    //va a asegurarse que todos los campos sean true para luego dar la posibilidad de enviar el formulario
-    const camposValidos = [false, false, false, false, false, false, false, false]
+    camposValidos = [false, false, false, false, false, false, false, false]
     
     inputs.forEach((input, index) => [
         input.addEventListener('input', () => {
@@ -111,17 +122,9 @@ function initAlta(){
 
     form.addEventListener('submit', e => {
         e.preventDefault()
-    
-        //borrar todos los inputs
-        inputs.forEach(input => input.value = '')
-
-        console.log(producto)
-        productos.push(producto)
-
-        button.disabled = true
-
-        renderProds()
+        
+        //guardarProducto()
     })
 
-    renderProds()
+    obtenerProductos()
 }
