@@ -1,0 +1,7 @@
+class ProductoController {
+    constructor(){
+        //super()
+    }
+
+    
+}

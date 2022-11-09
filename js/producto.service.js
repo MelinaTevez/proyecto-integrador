@@ -20,6 +20,7 @@ async function borrarProductoService(id){
     const productoBorrado = await del(URL_PRODUCTOS, id)
     return productoBorrado
 }
+
 /* testes */
 /* const producto = {
     nombre: 'Bolso',
@@ -27,7 +28,7 @@ async function borrarProductoService(id){
     precio: 1234,
     stock: 12 
 
-}
-guardarProductoService(producto) */
-
+} */
+//guardarProductoService(producto) 
+//actualizarProductoService(3, producto)
 //borrarProductoService(2)

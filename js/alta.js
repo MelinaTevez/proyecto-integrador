@@ -62,12 +62,17 @@ const renderProds = () => {
     xhr.addEventListener('load', () => {
         if(xhr.status === 200){
             let plantillaHbs = xhr.response
-            console.log(plantillaHbs)
+            //console.log(plantillaHbs)
 
             let template = Handlebars.compile(plantillaHbs)
-            console.log(template)
+            //console.log(template)
 
-            let html = template({productos: productos})
+            let html = template(
+                {
+                    productos: productos,
+                    validos: !algunCampoValido()
+                }
+            )
 
             document.getElementById('listado-productos').innerHTML = html
         }
@@ -123,7 +128,7 @@ function initAlta(){
     form.addEventListener('submit', e => {
         e.preventDefault()
         
-        //guardarProducto()
+        guardarProducto()
     })
 
     obtenerProductos()
