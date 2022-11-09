@@ -1,4 +1,4 @@
-const URL_PRODUCTOS = 'https://633eca1d83f50e9ba3b84b17.mockapi.io/productos'
+const URL_PRODUCTOS = 'https://633eca1d83f50e9ba3b84b17.mockapi.io/productos/'
 
 async function obtenerProductosService() {
     let productos = await get(URL_PRODUCTOS)
@@ -6,53 +6,28 @@ async function obtenerProductosService() {
     return productos
 }
 
-obtenerProductosService()
-
-/* POST */
-
-async function post(url, dato){
-    try {
-        const respuesta = await fetch(url, {
-            method: 'post',
-            body: JSON.stringify(dato),
-            headers:{'content-type': 'application/json'}
-        })
-
-        const resultado = await respuesta.json()
-        return resultado
-    } catch (error) {
-        console.error('ERROR POST', error)
-    }
+async function guardarProductoService(producto) {
+    const productoGuardado = await post(URL_PRODUCTOS, producto)
+    return productoGuardado
 }
 
-/* PUT */
-async function put(url, id, dato){
-    try {
-        const respuesta = await fetch(url + id, {
-            method: 'put',
-            body: JSON.stringify(dato),
-            headers:{'content-type': 'application/json'}
-        })
-
-        const resultado = await respuesta.json()
-        return resultado
-    } catch (error) {
-        console.error('ERROR PUT', error)
-    }
+async function actualizarProductoService(id, producto){
+    const productoActualizado = await put(URL_PRODUCTOS, id, producto)
+    return productoActualizado
 }
 
-/*DELETE */
-
-async function DEL(url, id){
-    try {
-        const respuesta = await fetch(url + id, {
-            method: 'delete'
-        })
-
-        const resultado = await respuesta.json()
-
-        return resultado
-    } catch (error) {
-        console.error('ERROR DELETE', error)
-    }
+async function borrarProductoService(id){
+    const productoBorrado = await del(URL_PRODUCTOS, id)
+    return productoBorrado
 }
+/* testes */
+/* const producto = {
+    nombre: 'Bolso',
+    descripcion: 'Bolso de mano color rojo',
+    precio: 1234,
+    stock: 12 
+
+}
+guardarProductoService(producto) */
+
+//borrarProductoService(2)
