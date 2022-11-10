@@ -1,9 +1,47 @@
+class FormularioAlta {
+
+    inputs  = null
+    form = null
+    button = null
+    camposValidos = [false, false, false, false, false, false, false]
+
+    //Expresiones Regulares
+    regExpValidar = [
+        /^.+$/,      // regexp nombre
+        /^.+$/,      // regexp precio
+        /^[0-9]+$/,  // regexp stock
+        /^.+$/,      // regexp marca
+        /^.+$/,      // regexp categoria
+        /^.+$/,      // regexp detalles
+        /^.+$/,      // regexp foto
+    ]
+
+    constructor(){
+
+        this.inputs = document.querySelectorAll('main form input')
+        this.form = document.querySelector('main form')
+        this.button = document.querySelector('main form button')
+
+        button.disabled = true
+        
+        inputs.forEach((input, index) => [
+            input.addEventListener('input', () => {
+                validar(input.value, regExpValidar[index], index)
+            })
+        ])
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            
+            guardarProducto()
+        })
+    
+        obtenerProductos()
+    }
+}
+
 /* ------ DECLARACIONES DE VARIABLES Y FUNCIONES GLOBALES ----- */
 
-let inputs
-let form
-let button
-let camposValidos
 
 //mostrar u ocultar el mensaje
 const setCustomValidityJS = (mensaje, index) => {
@@ -43,17 +81,6 @@ const validar = (valor, validador, index) => {
     return valor
 }
 
-//array con todas las expresiones regularesn de los campos
-const regExpValidar = [
-
-    /^.+$/,      // regexp nombre
-    /^.+$/,      // regexp precio
-    /^[0-9]+$/,  // regexp stock
-    /^.+$/,      // regexp marca
-    /^.+$/,      // regexp categoria
-    /^.+$/,      // regexp detalles
-    /^.+$/,      // regexp foto
-]
 
 const renderProds = () => {
 
@@ -112,24 +139,5 @@ function leerProductoIngresado(){
 function initAlta(){
     console.warn('initAlta()')
 
-    inputs = document.querySelectorAll('main form input')
-    form = document.querySelector('main form')
-    button = document.querySelector('main form button')
-    
-    button.disabled = true
-    camposValidos = [false, false, false, false, false, false, false, false]
-    
-    inputs.forEach((input, index) => [
-        input.addEventListener('input', () => {
-            validar(input.value, regExpValidar[index], index)
-        })
-    ])
 
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        
-        guardarProducto()
-    })
-
-    obtenerProductos()
 }
