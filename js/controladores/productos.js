@@ -17,7 +17,7 @@ class ProductoController {
         const productoGuardado = await guardarProductoService(producto)
         console.log(productoGuardado)
 
-        producto.push(productoGuardado)
+        productos.push(productoGuardado)
 
         renderProds()
     }
@@ -51,3 +51,5 @@ class ProductoController {
     }
 
 }
+
+const productoController = new ProductoController()
