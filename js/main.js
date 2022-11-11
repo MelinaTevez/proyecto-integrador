@@ -1,5 +1,3 @@
-var elemSectionCarrito = document.getElementsByClassName('section-carrito')[0]
-
 class Main {
 
     // AJAX
