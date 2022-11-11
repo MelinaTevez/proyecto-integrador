@@ -1,23 +1,25 @@
 var elemSectionCarrito = document.getElementsByClassName('section-carrito')[0]
 
-function start(){
-
-    /*FUNCIONES HELPERS */
-
+class Main {
     //AJAX
-    function ajax(url, metodo = 'get') {
-        const xhr = new XMLHttpRequest()
-        xhr.open(metodo, url)
-        xhr.send()
+    async ajax(url, metodo = 'get') {
 
-        return xhr
+        try {
+            const respuesta = await fetch(url, {method: metodo})
+            const resultado = await respuesta.text()
+            
+            return resultado
+        } catch (error) {
+            console.error(error)
+        }
+        
     }
-    
-    function getNombreArchivo(id) {
+
+    getNombreArchivo(id) {
         return 'vistas/' + id + '.html'
     }
 
-    function marcarLink(id) {
+    marcarLink(id) {
         const links = document.querySelectorAll('header nav a')
         links.forEach( link => {
             if(link.id === id) link.classList.add('active')
@@ -25,7 +27,7 @@ function start(){
         })
     }
 
-    function initJS(id) {
+    initJS(id) {
         if( id === 'alta' ) {
             initAlta()
         }
@@ -40,57 +42,60 @@ function start(){
         }
     }
 
-    function cargarPlantilla(id) {
-        let archivo = getNombreArchivo(id)
-
-        let xhr = ajax(archivo)
-
+    async cargarPlantilla(id) {
+        let archivo = this.getNombreArchivo(id)
+    
+        let xhr = await this.ajax(archivo)
+    
         xhr.addEventListener('load', () => {
             if(xhr.status === 200) {
                 let plantilla = xhr.response
-
+    
                 let main = document.querySelector('main')
                 main.innerHTML = plantilla
-
+    
                 //carga del codigo script de la plantilla
-
-                initJS(id)
+    
+                this.initJS(id)
             }
         })
     }
 
-    const cargarPlantillas = () => {
-
+    async cargarPlantillas() {
+    
         /* CARGA INICIAL DE LA VISTA DETERMINADA POR LA URL VISITADA */
 
         let id = location.hash.slice(1) || 'inicio' // #inicio => slice(1) => inicio
-        marcarLink(id)
-        cargarPlantilla(id)
+        this.marcarLink(id)
+        await this.cargarPlantilla(id)
 
         /* CARGA DE CADA UNO DE LOS CONTENIDOS SEGUN LA NAVEGACION LOCAL */
 
         const links = document.querySelectorAll('header nav a')
-        //console.log(links)
 
         links.forEach(link => {
             link.addEventListener('click', e => {
                 e.preventDefault()
 
                 let id = link.id
-                console.log(id)
+                // console.log(id)
                 location.hash = id
             })
         })
-
-         window.addEventListener('hashchange', () => {
-            console.log('Cambió la URL')
-
+    
+        window.addEventListener('hashchange', async () => {
+            //console.log('Cambió la URL')
             let id = location.hash.slice(1) || 'inicio'
-            marcarLink(id)
-            cargarPlantilla(id)
+            this.marcarLink(id)
+            await this.cargarPlantilla(id)
         }) 
-
+    
     }
-    cargarPlantillas()
+        
+    async start() {
+        await this.cargarPlantilla()
+    }
 }
-start()
+
+const main = new Main()
+main.start()
