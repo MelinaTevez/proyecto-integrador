@@ -6,9 +6,9 @@ async function renderPlantillaListado(listado){
         const template = Handlebars.compile(plantillaHbs)
     
         const html = template({listado})
+        console.log(html)
     
         document.getElementsByClassName('cards-container')[0].innerHTML = html
-        
     } catch (error) {
         console.error(error)
     }
@@ -22,6 +22,7 @@ async function initInicio(){
     console.warn('initInicio()')
 
     const productos = await productoController.obtenerProductos()
+    console.log(productos)
     await renderPlantillaListado(productos)
 
     document.querySelector('.section-cards__header p').innerHTML = `Se encontraron ${productos.length} productos`
