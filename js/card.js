@@ -28,24 +28,7 @@ function initInicio(){
             elemSectionCarrito.append(nuevoItemCarrito)
         })
 
-        card.innerHTML = `
-
-                    <article class="card__article">
-                        <div class="card__image-container">
-                        <img
-                            class="card__image"
-                            src=${this.image}
-                            alt=${this.heading}
-                        />
-                        </div>
-                        <div class="card__content">
-                        <h2 class="card__heading">${this.heading}</h2>
-                        <div class="card__description">
-                            <p>${this.description}</p>
-                        </div>
-                        </div>
-                    </article>
-                `
+        card.innerHTML = ` `
         destinationElement.appendChild(card)
         }
     }
