@@ -37,16 +37,15 @@ class ProductoController extends ProductoModel {
 
     }
 
-    async borrarProducto(id){
+    async borrarProducto(id) { 
         console.log('borrarProducto', id)
-
+    
         let productoBorrado = await productoService.borrarProductoService(id)
-
+    
         const index = this.productos.findIndex(producto => producto.id == productoBorrado.id)
         this.productos.splice(index, 1)
-
+    
         renderTablaAlta(null, this.productos)
-
     }
 
 }

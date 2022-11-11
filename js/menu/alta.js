@@ -23,54 +23,57 @@ class FormularioAlta {
         this.button.disabled = true
         
         this.inputs.forEach((input, index) => {
-            if(input.type != 'checkbox') {
-                input.addEventListener('input', () => {
-                    this.validar(input.value, this.regExpValidar[index], index)
-                    if(renderTablaAlta) renderTablaAlta(!this.algunCampoValido(), productoController.productos)
-                })
+            if (input.type != "checkbox") {
+              input.addEventListener("input", () => {
+                this.validar(input.value, this.regExpValidar[index], index)
+                if (renderTablaAlta) renderTablaAlta(!this.algunCampoValido(), productoController.productos)
+              })
             }
-        })
+          })
 
-        this.form.addEventListener('submit', (e) => {
+        
+        this.form.addEventListener("submit", (e) => {
             e.preventDefault()
-            
+        
             const producto = this.leerProductoIngresado()
             this.limpiarFormulario()
-
+        
             if(guardarProducto) guardarProducto(producto)
-
+         
         })
-
+        
     }
 
     //para comprobar la validez de los campos
     algunCampoValido() {
         let valido =
-            camposValidos[0] &&
-            camposValidos[1] &&
-            camposValidos[2] &&
-            camposValidos[3] &&
-            camposValidos[4] &&
-            camposValidos[5] &&
-            camposValidos[6]
+            this.camposValidos[0] &&
+            this.camposValidos[1] &&
+            this.camposValidos[2] &&
+            this.camposValidos[3] &&
+            this.camposValidos[4] &&
+            this.camposValidos[5] &&
+            this.camposValidos[6]
 
         return !valido
     }
 
-    //va a validar campos
+   
+    // Validar campos
     validar(valor, validador, index) {
-        
-        if(!validador.test(valor)) {
-            this.setCustomValidityJS('Este campo no es valido', index)
+        //console.log(valor, validador, index)
+
+        if (!validador.test(valor)) {
+            this.setCustomValidityJS("Este campo no es válido", index)
             this.camposValidos[index] = false
             this.button.disabled = true
-            return null
+            return null // break
         }
 
         this.camposValidos[index] = true
-        this.button.disabled = this.algunCampoValido() //boolean
+        this.button.disabled = this.algunCampoValido() // boolean
 
-        this.setCustomValidityJS('', index)
+        this.setCustomValidityJS("", index)
         return valor
     }
 
@@ -94,11 +97,12 @@ class FormularioAlta {
         }
     }
     
-     // Limpiamos los imputs del formulario
+      // Limpiamos los imputs del formulario
     limpiarFormulario() {
+        // borro todos los inputs
         this.inputs.forEach(input => {
-            if (input.type != 'checkbox') input.value = ''
-            else if(input.type == 'checkbox') input.checked = false
+        if (input.type != "checkbox") input.value = ""
+        else if (input.type == "checkbox") input.checked = false
         })
 
         this.button.disabled = true
@@ -108,21 +112,23 @@ class FormularioAlta {
 
 }
 
-const renderTablaAlta = (validos , productos) => {
-
+// Rendereabamos la plantilla
+const renderTablaAlta = (validos, productos) => {
+  
     const xhr = new XMLHttpRequest()
-    xhr.open('get', 'plantillas/alta.hbs')
-    xhr.addEventListener('load', () => {
-        if(xhr.status === 200){
-            let plantillaHbs = xhr.response
-
-            let template = Handlebars.compile(plantillaHbs)
-
-            console.warn(productos)
-            let html = template({productos, validos})
-            document.getElementById('listado-productos').innerHTML = html
-        }
+    xhr.open("get", "plantillas/alta.hbs")
+    xhr.addEventListener("load", () => {
+      if (xhr.status === 200) {
+        let plantillaHbs = xhr.response
+  
+        let template = Handlebars.compile(plantillaHbs)
+  
+        // console.warn(productos)
+        let html = template({ productos, validos })
+        document.getElementById("listado-productos").innerHTML = html
+      }
     })
+  
     xhr.send()
 }
 
@@ -130,12 +136,11 @@ const renderTablaAlta = (validos , productos) => {
 
 let formularioAlta = null
 
-async function initAlta(){
-    console.warn('initAlta()')
+async function initAlta() {
+  console.warn("initAlta()")
 
-    formularioAlta = new FormularioAlta(renderTablaAlta, productoController.guardarProducto)
+  formularioAlta = new FormularioAlta(renderTablaAlta, productoController.guardarProducto)
 
-    const productos = await productoController.obtenerProductos()
-    renderTablaAlta(null, productos)
-
+  const productos = await productoController.obtenerProductos()
+  renderTablaAlta(null, productos)
 }

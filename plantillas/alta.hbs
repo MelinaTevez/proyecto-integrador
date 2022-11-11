@@ -28,13 +28,13 @@
         {{/if}}
         <td>
             {{#if ../validos}}
-                <button onclick="actualizarProducto({{id}})">Actualizar</button>
+                <button onclick="productoController.actualizarProducto({{id}})">Actualizar</button>
             {{else}}
-                <button disabled onclick="actualizarProducto({{id}})">Actualizar</button>
+                <button disabled onclick="productoController.actualizarProducto({{id}})">Actualizar</button>
             {{/if}}
         </td>
         <td>
-            <button onclick="borrarProducto({{id}})">Borrar</button>
+            <button onclick="productoController.borrarProducto({{id}})">Borrar</button>
         </td>
     </tr>
     {{/each}}
