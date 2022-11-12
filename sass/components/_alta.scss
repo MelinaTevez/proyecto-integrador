@@ -1,62 +1,208 @@
 .container-alta {
-    padding: 10px;
 
-    h1, h2 {
-        color: blue;
+    h1{
+        font-size: 40px;
+        text-align: center;
+        color: $colorTipografia;
+        letter-spacing: 5px;
+        background-color: $colorCuaternario;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform:uppercase;
+    
+        @media (max-width: 768px) {
+            font-size: 30px;
+            letter-spacing: 0;
+        }
+    }
+    h2 {
+        /*  width: 100vw; */
+         font-size: 30px;
+         text-transform: uppercase;
+         color: #D074FF;
+         background-color: $colorTipografia;
+         padding: 10px;
+         margin-bottom: 10px;
+     }
+
+    &__form-alta  {
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+        flex-direction: column;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        border: 2px solid $colorTipografia;
+        border-radius: 15px;
+        margin-top: 20px; 
+        margin-bottom: 20px; 
+        width: 70vw;
+
+        & h2 {
+            width: 70vw;
+            background-color: #D074FF;
+            color: $colorTipografia;
+            /* font-size: 30px;
+            text-transform: uppercase;
+            background-color: #D074FF; */
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            padding-left: 5%;
+        }
     }
 
-    div, input {
-        width: 300px;
+     input,label {
         display: block;
-        margin-bottom: 1px;
-        padding: 5px;
+        margin: 5px;
+        margin-left: 15%;
+        font-size: 20px;
+        font-weight: 400;
+        width: 50vw;
     }
     
     button {
-        display: block;
-        margin-top: 20px;
-        width: 80px;
-        background-color: blue;
+        display: block; 
+        background-color: rgb(50, 190, 50);
         color: white;
+        font-size: 30px;
+        padding: 5px;
+        border-radius: 3px;
+        margin: 5px;
         cursor: pointer;
-        margin-bottom: 10px;
 
         &:hover {
-            background-color: blueviolet;
+            background-color: $colorTipografia;
+            color: white;
         }
 
         &:disabled {
-            background-color: red;
+            background-color: rgba(49, 48, 48, 0.671);
+             color: rgb(179, 179, 179); 
         }
     }
 
 
-    input[type="checkbox"] {
-        display: inline;
+    form button {
+        margin-left: 40%;
+        margin-bottom: 20px;
+    }
+    input[type="checkbox"]{
+       /*  display: inline; */
+      /*  flex-direction: row; */
         width: 15px;
         height: 15px;
         margin-top: 10px;
     }
 
     form div {
-        border: 1px solid crimson;
-        background-color: gold;
-        color: darkred;
-        margin: 2px 0 10px 0;
+        border: 1px solid white;
+        background-color: crimson;
+        color: white;
+        font-weight: 700;
+        margin-left: 15%;
+        padding: 5px;
+      /*   margin: 2px 0 10px 0; */
         border-radius: 5px;
         display: none;
     }
 
     table,th, td {
-        border: 1px solid black;
+        border: 1px solid $colorTipografia;
         border-collapse: collapse;
     }
 
+    th {
+        font-size: larger;
+    }
+    td {
+        padding: 5px;
+    }
+
+    td button {
+        width: auto;
+        font-size: 15px;
+    }
+
     table {
-        width: 90%;
+        width: 98%;
+        margin: 10px;
     }
 
     #listado-productos {
         width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        & h2{
+            font-size: 20px;
+        }
+
+        &__form-alta {
+
+            margin: 5px;
+            width:95vw ;
+
+            & h2{
+                width: 95vw;
+            }
+        }
+    
+        /* &__motivo,
+        &__informacion,
+        &__comentario{
+            border: 1px solid $colorTipografia;
+            margin: 5px;
+            width: 90vw;
+        } */
+    
+    
+        & label, 
+        & input{
+            font-size: 18px;
+            margin-left: 10px;
+            width: 90vw;
+        }
+
+        & button{
+            font-size: 22px;
+        }
+
+        form div {
+    
+            font-weight: 400;
+            margin-left: 10px;
+        }
+
+        /* table,th, td {
+            border: 1px solid $colorTipografia;
+            border-collapse: collapse;
+        }
+     */
+        th {
+            font-size: 10px;
+            padding: 2px;
+        }
+        td {
+            padding: 0px;
+            font-size: 10px;
+        }
+    
+        td button {
+            width: auto;
+            font-size: 10px;
+            padding: 0;
+        }
+    
+        table {
+            width: 100vw;
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+    
+        #listado-productos {
+            width: 10vw;
+        }
     }
 }
