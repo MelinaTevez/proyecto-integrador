@@ -7,23 +7,37 @@
     overflow: hidden;
     border-radius: 7px;
     box-shadow: 0px 1px 10px rgba(148, 80, 161, 0.315);
-    transition: all 500ms ease;
+    transition: all 800ms ease;
 
 
     &:hover, 
     &:focus {
         box-shadow: 5px 5px 20px rgba(97, 37, 116, 0.479);
-        transform: translateY(-3%);
+        transform: translateY(-2%);
     }
 
-    @media (max-width: 768px) {
-        &{
-          width: 150px;
-          height: 280px;
-          overflow: auto;
+    &__button{
+    
+        background-color: $colorTerciario;
+        font-size: 18px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        border: 1px solid $colorTerciario;
+        padding: 5px;
+        margin: 10%;
+        margin-left: 20%;
+
+        &:hover{
+            box-shadow: 3px 3px 7px rgba(73, 16, 90, 0.479);
+            font-weight: 700;
         }
     }
 
+    &__button img {
+        width: 15px;
+    }
+
+    
     &__image-container {
         height: 200px;
         overflow: hidden;
@@ -37,7 +51,7 @@
         object-fit: cover;
         transition: .2s;
     }
-
+    
     &__content {
         color: $colorTipografia;
         text-align: center;
@@ -54,7 +68,7 @@
         padding: 0.8em;
         font-size: 16px;
         text-align: start;
-   
+        
     }
 
     @media (min-width: 1024px) {
@@ -62,19 +76,48 @@
             min-width: 240px;
         }
     }
-
     @media (max-width: 768px) {
+    
+        &{
+          height: fit-content;
+          overflow:visible;
+          max-width: 38vw; 
+    
+            &:hover, 
+            &:focus {
+                box-shadow: none;
+                transform:none;
+            }
+        }
 
         &__heading{
-            font-size: 20px;
-       
+            font-size: 18px;
         }
     
         &__description{
             font-size: 14px;
-       
         }
 
+        &__button{
+            font-size: 14px;
+            margin: 5%;
+            margin-left: 15%; 
+    
+            &:hover{
+                box-shadow: none;
+            }
+        }
+    
+        &__button img {
+            width: 12px;
+        }
+
+        &__image-container {
+            height: 150px;
+            overflow: hidden;
+        
+        }
+    
     }
 
 }
