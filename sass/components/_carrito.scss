@@ -1,15 +1,55 @@
 .section-carrito {
     display: none;
     position: fixed;
-    background-color: #f1f2f3;
+    background-color: $colorCuaternario;
     z-index: 1;
     top: 150px;
     left: 150px;
     right: 150px;
     bottom: 150px;
-    box-shadow: .3em .3em 10em .3em rgba(0,0,0,1);
+    box-shadow: .3em .3em 10em .3em rgb(26, 3, 63)/* rgba(0,0,0,1) */;
 
     &--visible {
         display: block;
+    }
+
+    td,th,table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+    }
+
+    table {
+        width: 70vw;
+        margin: 3%;   
+    }
+
+    
+    button {
+        font-size: 20px;
+        background-color: $colorTipografia;
+        color: white;
+        padding: 5px;
+        border-radius: 3px;
+       /*  margin: 5px; */
+        cursor: pointer;
+
+        &:hover {
+            background-color: $colorSecundario;
+            color: $colorTipografia;
+        }
+    }
+
+    .btn__enviarCarrito {
+        margin-left: 80%;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        background-color: $colorSecundario;
     }
 }

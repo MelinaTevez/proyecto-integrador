@@ -18,7 +18,6 @@
         }
     }
     h2 {
-        /*  width: 100vw; */
          font-size: 30px;
          text-transform: uppercase;
          color: #D074FF;
@@ -44,9 +43,6 @@
             width: 70vw;
             background-color: #D074FF;
             color: $colorTipografia;
-            /* font-size: 30px;
-            text-transform: uppercase;
-            background-color: #D074FF; */
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
             padding-left: 5%;
@@ -74,7 +70,7 @@
 
         &:hover {
             background-color: $colorTipografia;
-            color: white;
+            color: $colorTipografia ;
         }
 
         &:disabled {
@@ -89,8 +85,6 @@
         margin-bottom: 20px;
     }
     input[type="checkbox"]{
-       /*  display: inline; */
-      /*  flex-direction: row; */
         width: 15px;
         height: 15px;
         margin-top: 10px;
@@ -103,7 +97,6 @@
         font-weight: 700;
         margin-left: 15%;
         padding: 5px;
-      /*   margin: 2px 0 10px 0; */
         border-radius: 5px;
         display: none;
     }
@@ -141,22 +134,13 @@
 
         &__form-alta {
 
-            margin: 5px;
+            margin: 1px;
             width:95vw ;
 
             & h2{
                 width: 95vw;
             }
         }
-    
-        /* &__motivo,
-        &__informacion,
-        &__comentario{
-            border: 1px solid $colorTipografia;
-            margin: 5px;
-            width: 90vw;
-        } */
-    
     
         & label, 
         & input{
@@ -175,11 +159,6 @@
             margin-left: 10px;
         }
 
-        /* table,th, td {
-            border: 1px solid $colorTipografia;
-            border-collapse: collapse;
-        }
-     */
         th {
             font-size: 10px;
             padding: 2px;
@@ -193,16 +172,15 @@
             width: auto;
             font-size: 10px;
             padding: 0;
+            
         }
     
         table {
-            width: 100vw;
-            margin: 0px;
+            width: 95vw;
+            margin: 1px;
             margin-bottom: 10px;
         }
     
-        #listado-productos {
-            width: 10vw;
-        }
+        
     }
 }

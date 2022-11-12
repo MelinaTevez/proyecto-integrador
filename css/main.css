@@ -795,7 +795,6 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   }
 }
 .container-alta h2 {
-  /*  width: 100vw; */
   font-size: 30px;
   text-transform: uppercase;
   color: #D074FF;
@@ -820,9 +819,6 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   width: 70vw;
   background-color: #D074FF;
   color: #141414;
-  /* font-size: 30px;
-  text-transform: uppercase;
-  background-color: #D074FF; */
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   padding-left: 5%;
@@ -847,7 +843,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .container-alta button:hover {
   background-color: #141414;
-  color: white;
+  color: #141414;
 }
 .container-alta button:disabled {
   background-color: rgba(49, 48, 48, 0.671);
@@ -858,8 +854,6 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin-bottom: 20px;
 }
 .container-alta input[type=checkbox] {
-  /*  display: inline; */
-  /*  flex-direction: row; */
   width: 15px;
   height: 15px;
   margin-top: 10px;
@@ -871,7 +865,6 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   font-weight: 700;
   margin-left: 15%;
   padding: 5px;
-  /*   margin: 2px 0 10px 0; */
   border-radius: 5px;
   display: none;
 }
@@ -897,25 +890,11 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   width: 100%;
 }
 @media (max-width: 768px) {
-  .container-alta {
-    /* &__motivo,
-    &__informacion,
-    &__comentario{
-        border: 1px solid $colorTipografia;
-        margin: 5px;
-        width: 90vw;
-    } */
-    /* table,th, td {
-           border: 1px solid $colorTipografia;
-           border-collapse: collapse;
-       }
-    */
-  }
   .container-alta h2 {
     font-size: 20px;
   }
   .container-alta__form-alta {
-    margin: 5px;
+    margin: 1px;
     width: 95vw;
   }
   .container-alta__form-alta h2 {
@@ -947,28 +926,58 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     padding: 0;
   }
   .container-alta table {
-    width: 100vw;
-    margin: 0px;
+    width: 95vw;
+    margin: 1px;
     margin-bottom: 10px;
-  }
-  .container-alta #listado-productos {
-    width: 10vw;
   }
 }
 
 .section-carrito {
   display: none;
   position: fixed;
-  background-color: #f1f2f3;
+  background-color: #F8D5F8;
   z-index: 1;
   top: 150px;
   left: 150px;
   right: 150px;
   bottom: 150px;
-  box-shadow: 0.3em 0.3em 10em 0.3em rgb(0, 0, 0);
+  box-shadow: 0.3em 0.3em 10em 0.3em rgb(26, 3, 63);
 }
 .section-carrito--visible {
   display: block;
+}
+.section-carrito td, .section-carrito th, .section-carrito table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+.section-carrito table {
+  width: 70vw;
+  margin: 3%;
+}
+.section-carrito button {
+  font-size: 20px;
+  background-color: #141414;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  /*  margin: 5px; */
+  cursor: pointer;
+}
+.section-carrito button:hover {
+  background-color: #D074FF;
+  color: #141414;
+}
+.section-carrito .btn__enviarCarrito {
+  margin-left: 80%;
+}
+.section-carrito h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #D074FF;
 }
 
 .active {
