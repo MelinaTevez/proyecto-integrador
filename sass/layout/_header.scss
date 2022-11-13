@@ -134,13 +134,14 @@
 
     &__carrito-container {
         flex: 0 0 3em;
-        background-color: $colorTerciario;
+        background-color: $colorPrimario;
+       
     }
 
     &__carrito-container img{
-        width: 100%;
+        width: 50px;
         height: 100%;
-        padding: 0.3em;
+    
     }
 
     @media (max-width: 768px) {  

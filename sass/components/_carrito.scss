@@ -1,12 +1,13 @@
 .section-carrito {
     display: none;
     position: fixed;
-    background-color: $colorCuaternario;
+    background-color: white;
     z-index: 1;
-    top: 150px;
-    left: 150px;
-    right: 150px;
-    bottom: 150px;
+    overflow: scroll;
+    top:7%;
+    left: 15%;
+    right: 15%;
+    bottom:7%;
     box-shadow: .3em .3em 10em .3em rgb(26, 3, 63)/* rgba(0,0,0,1) */;
 
     &--visible {
@@ -16,23 +17,30 @@
     td,th,table {
         border: 1px solid black;
         border-collapse: collapse;
-        padding: 10px;
+        padding: 5px;
+        text-align: center;
     }
 
+    th{
+        background-color: $colorSecundario;
+    }
     table {
-        width: 70vw;
-        margin: 3%;   
+        width: 60vw;
+        margin-top: 2%;  
+        margin-bottom: 2%;  
+        margin-right: 5%;  
+        margin-left: 5%;  
     }
-
     
-    button {
-        font-size: 20px;
+    .btn__enviarCarrito  {
+        font-size: 30px;
         background-color: $colorTipografia;
         color: white;
         padding: 5px;
         border-radius: 3px;
-       /*  margin: 5px; */
+        margin: 5px;
         cursor: pointer;
+        margin-left: 80%;
 
         &:hover {
             background-color: $colorSecundario;
@@ -40,8 +48,19 @@
         }
     }
 
-    .btn__enviarCarrito {
-        margin-left: 80%;
+    .btn__borrarDelCarrito {
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        & img{
+            margin: 10px;
+            width: 40px;
+        }
+        &:hover{
+            background-color: rgba(220, 20, 60, 0.247);
+            border-radius: 50%;
+        }
+
     }
 
     h2 {
@@ -49,7 +68,61 @@
         font-size: 40px;
         display: flex;
         justify-content: center;
-        padding: 5px;
-        background-color: $colorSecundario;
+        padding: 10px;
+        background-color: white;
+        color: #B02CA9;
+        margin-top: 5%;
+    }
+
+    .carrito-img{
+        width: 30%;
+        margin-left: 38%;
+        margin-top: 5%;
+        
+    }
+    @media (max-width: 768px) {  
+        
+        top:7%;
+        bottom:auto;
+        left: 1%;
+        right: 1%;
+       
+        td,th,table {
+            padding: 1px;
+            font-size: 13px;
+        }
+
+        table {
+            width: 95vw;
+            margin-right: 2%;  
+            margin-left: 2%;  
+        }
+
+        .btn__enviarCarrito  {
+            margin-left: 70%;
+            font-size: 20px
+
+        }
+            
+        .btn__borrarDelCarrito {
+            & img{
+                margin: 7px;
+                width: 30px;
+            }
+        }
+
+        h2 {
+
+            font-size: 25px;
+            margin-top: 3%;
+        }
+    
+        .carrito-img{
+            width: 25%;
+            margin-left: 40%;
+            margin-top: 2%;
+            
+        }
+
     }
 }

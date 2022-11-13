@@ -3,12 +3,12 @@
     text-decoration: none;
     flex-grow: 1;
     max-width: 200px; 
-    height: 350px;
-    overflow: hidden;
+    height: 360px;
+    overflow:hidden;
     border-radius: 7px;
     box-shadow: 0px 1px 10px rgba(148, 80, 161, 0.315);
     transition: all 800ms ease;
-
+    background-color: white;
 
     &:hover, 
     &:focus {
@@ -19,24 +19,21 @@
     &__button{
     
         background-color: $colorTerciario;
-        font-size: 18px;
+        font-size: 20px;
         text-transform: uppercase;
         border-radius: 3px;
         border: 1px solid $colorTerciario;
         padding: 5px;
-        margin: 10%;
+        /* margin-bottom: 5%; */
+        margin:10px;
         margin-left: 20%;
+        /* margin-top: 10%; */
 
         &:hover{
             box-shadow: 3px 3px 7px rgba(73, 16, 90, 0.479);
             font-weight: 700;
         }
     }
-
-    &__button img {
-        width: 15px;
-    }
-
     
     &__image-container {
         height: 200px;
@@ -101,17 +98,13 @@
         &__button{
             font-size: 14px;
             margin: 5%;
-            margin-left: 15%; 
+            margin-left: 18%; 
     
             &:hover{
                 box-shadow: none;
             }
         }
     
-        &__button img {
-            width: 12px;
-        }
-
         &__image-container {
             height: 150px;
             overflow: hidden;

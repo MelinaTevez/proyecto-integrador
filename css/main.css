@@ -144,12 +144,11 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .search-bar__carrito-container {
   flex: 0 0 3em;
-  background-color: #ED93EC;
+  background-color: #AD5ED6;
 }
 .search-bar__carrito-container img {
-  width: 100%;
+  width: 50px;
   height: 100%;
-  padding: 0.3em;
 }
 @media (max-width: 768px) {
   .search-bar {
@@ -281,11 +280,12 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   text-decoration: none;
   flex-grow: 1;
   max-width: 200px;
-  height: 350px;
+  height: 360px;
   overflow: hidden;
   border-radius: 7px;
   box-shadow: 0px 1px 10px rgba(148, 80, 161, 0.315);
   transition: all 800ms ease;
+  background-color: white;
 }
 .card:hover, .card:focus {
   box-shadow: 5px 5px 20px rgba(97, 37, 116, 0.479);
@@ -293,20 +293,19 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .card__button {
   background-color: #ED93EC;
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
   border-radius: 3px;
   border: 1px solid #ED93EC;
   padding: 5px;
-  margin: 10%;
+  /* margin-bottom: 5%; */
+  margin: 10px;
   margin-left: 20%;
+  /* margin-top: 10%; */
 }
 .card__button:hover {
   box-shadow: 3px 3px 7px rgba(73, 16, 90, 0.479);
   font-weight: 700;
-}
-.card__button img {
-  width: 15px;
 }
 .card__image-container {
   height: 200px;
@@ -360,13 +359,10 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   .card__button {
     font-size: 14px;
     margin: 5%;
-    margin-left: 15%;
+    margin-left: 18%;
   }
   .card__button:hover {
     box-shadow: none;
-  }
-  .card__button img {
-    width: 12px;
   }
   .card__image-container {
     height: 150px;
@@ -971,12 +967,13 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .section-carrito {
   display: none;
   position: fixed;
-  background-color: #F8D5F8;
+  background-color: white;
   z-index: 1;
-  top: 150px;
-  left: 150px;
-  right: 150px;
-  bottom: 150px;
+  overflow: scroll;
+  top: 7%;
+  left: 15%;
+  right: 15%;
+  bottom: 7%;
   box-shadow: 0.3em 0.3em 10em 0.3em rgb(26, 3, 63);
 }
 .section-carrito--visible {
@@ -985,35 +982,94 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .section-carrito td, .section-carrito th, .section-carrito table {
   border: 1px solid black;
   border-collapse: collapse;
-  padding: 10px;
+  padding: 5px;
+  text-align: center;
+}
+.section-carrito th {
+  background-color: #D074FF;
 }
 .section-carrito table {
-  width: 70vw;
-  margin: 3%;
+  width: 60vw;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 5%;
+  margin-left: 5%;
 }
-.section-carrito button {
-  font-size: 20px;
+.section-carrito .btn__enviarCarrito {
+  font-size: 30px;
   background-color: #141414;
   color: white;
   padding: 5px;
   border-radius: 3px;
-  /*  margin: 5px; */
+  margin: 5px;
   cursor: pointer;
+  margin-left: 80%;
 }
-.section-carrito button:hover {
+.section-carrito .btn__enviarCarrito:hover {
   background-color: #D074FF;
   color: #141414;
 }
-.section-carrito .btn__enviarCarrito {
-  margin-left: 80%;
+.section-carrito .btn__borrarDelCarrito {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+.section-carrito .btn__borrarDelCarrito img {
+  margin: 10px;
+  width: 40px;
+}
+.section-carrito .btn__borrarDelCarrito:hover {
+  background-color: rgba(220, 20, 60, 0.247);
+  border-radius: 50%;
 }
 .section-carrito h2 {
   text-transform: uppercase;
   font-size: 40px;
   display: flex;
   justify-content: center;
-  padding: 5px;
-  background-color: #D074FF;
+  padding: 10px;
+  background-color: white;
+  color: #B02CA9;
+  margin-top: 5%;
+}
+.section-carrito .carrito-img {
+  width: 30%;
+  margin-left: 38%;
+  margin-top: 5%;
+}
+@media (max-width: 768px) {
+  .section-carrito {
+    top: 7%;
+    bottom: auto;
+    left: 1%;
+    right: 1%;
+  }
+  .section-carrito td, .section-carrito th, .section-carrito table {
+    padding: 1px;
+    font-size: 13px;
+  }
+  .section-carrito table {
+    width: 95vw;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+  .section-carrito .btn__enviarCarrito {
+    margin-left: 70%;
+    font-size: 20px;
+  }
+  .section-carrito .btn__borrarDelCarrito img {
+    margin: 7px;
+    width: 30px;
+  }
+  .section-carrito h2 {
+    font-size: 25px;
+    margin-top: 3%;
+  }
+  .section-carrito .carrito-img {
+    width: 25%;
+    margin-left: 40%;
+    margin-top: 2%;
+  }
 }
 
 .active {

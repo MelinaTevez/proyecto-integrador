@@ -27,7 +27,7 @@
             {{/if}}
             
             <td>
-                <button onclick="carritoController.borrarProductoCarrito({{id}})" style="background-color:crimson; border: 1px solid crimson">Borrar</button>
+                <button onclick="carritoController.borrarProductoCarrito({{id}})" class="btn__borrarDelCarrito"><img src="../img/svg/bag_ecommerce_remove_shopping_icon.svg" alt="Bag Borrar"></button>
             </td>
         </tr>
          {{/each}}
@@ -35,4 +35,5 @@
     <button class="btn__enviarCarrito" onclick="carritoController.enviarCarrito()">Enviar</button>
 {{else}}
     <h2>El carrito está vacío</h2>
+    <img src="../img/svg/bag_delete_ecommerce_shopping_icon .svg" alt="Bag vacia" class="carrito-img">
 {{/if}}
