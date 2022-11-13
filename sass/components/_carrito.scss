@@ -31,13 +31,25 @@
         margin-right: 5%;  
         margin-left: 5%;  
     }
-    
+    .btn__cerrarCarrito {
+     /*    margin-right: 0; */
+        margin-left: 95%;
+        font-size: 30px;
+        background-color: white;
+        border: none;
+        padding: 5px;
+       /*  margin: 5px; */
+
+        &:hover {
+            color: crimson;
+        }
+    }
     .btn__enviarCarrito  {
         font-size: 30px;
         background-color: $colorTipografia;
         color: white;
-        padding: 5px;
-        border-radius: 3px;
+        padding: 10px;
+        border-radius: 50px;
         margin: 5px;
         cursor: pointer;
         margin-left: 80%;
@@ -45,6 +57,7 @@
         &:hover {
             background-color: $colorSecundario;
             color: $colorTipografia;
+            font-weight: 700;
         }
     }
 
@@ -52,13 +65,15 @@
         background-color: white;
         border: none;
         cursor: pointer;
+        width: 40px;
+
         & img{
-            margin: 10px;
-            width: 40px;
-        }
-        &:hover{
-            background-color: rgba(220, 20, 60, 0.247);
-            border-radius: 50%;
+            margin: 5px;
+            width: 30px;
+
+            &:hover{
+                width: 32px;
+            }
         }
 
     }
@@ -70,7 +85,7 @@
         justify-content: center;
         padding: 10px;
         background-color: white;
-        color: #B02CA9;
+        color: $colorTipografia;
         margin-top: 5%;
     }
 

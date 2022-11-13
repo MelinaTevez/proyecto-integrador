@@ -1,4 +1,5 @@
 .card {
+
     outline: none;
     text-decoration: none;
     flex-grow: 1;
@@ -18,20 +19,20 @@
 
     &__button{
     
-        background-color: $colorTerciario;
-        font-size: 20px;
+        background-color: $colorCuaternario;
+        font-size: 18px;
         text-transform: uppercase;
-        border-radius: 3px;
+        border-radius: 50px;
+        width: 80%;
         border: 1px solid $colorTerciario;
         padding: 5px;
-        /* margin-bottom: 5%; */
         margin:10px;
-        margin-left: 20%;
-        /* margin-top: 10%; */
+        margin-left: 10%;
 
         &:hover{
-            box-shadow: 3px 3px 7px rgba(73, 16, 90, 0.479);
+           /*  box-shadow: 3px 3px 7px rgba(73, 16, 90, 0.479); */
             font-weight: 700;
+            background-color: $colorTerciario;
         }
     }
     
@@ -62,10 +63,15 @@
     }
 
     &__description{
-        padding: 0.8em;
+        padding: 1px;
+        margin: 7px;
         font-size: 16px;
         text-align: start;
         
+    }
+    &__precio{
+        font-weight: 700;
+        font-size: 18px;
     }
 
     @media (min-width: 1024px) {

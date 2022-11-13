@@ -292,20 +292,20 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   transform: translateY(-2%);
 }
 .card__button {
-  background-color: #ED93EC;
-  font-size: 20px;
+  background-color: #F8D5F8;
+  font-size: 18px;
   text-transform: uppercase;
-  border-radius: 3px;
+  border-radius: 50px;
+  width: 80%;
   border: 1px solid #ED93EC;
   padding: 5px;
-  /* margin-bottom: 5%; */
   margin: 10px;
-  margin-left: 20%;
-  /* margin-top: 10%; */
+  margin-left: 10%;
 }
 .card__button:hover {
-  box-shadow: 3px 3px 7px rgba(73, 16, 90, 0.479);
+  /*  box-shadow: 3px 3px 7px rgba(73, 16, 90, 0.479); */
   font-weight: 700;
+  background-color: #ED93EC;
 }
 .card__image-container {
   height: 200px;
@@ -329,9 +329,14 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   text-transform: uppercase;
 }
 .card__description {
-  padding: 0.8em;
+  padding: 1px;
+  margin: 7px;
   font-size: 16px;
   text-align: start;
+}
+.card__precio {
+  font-weight: 700;
+  font-size: 18px;
 }
 @media (min-width: 1024px) {
   .card {
@@ -995,12 +1000,24 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin-right: 5%;
   margin-left: 5%;
 }
+.section-carrito .btn__cerrarCarrito {
+  /*    margin-right: 0; */
+  margin-left: 95%;
+  font-size: 30px;
+  background-color: white;
+  border: none;
+  padding: 5px;
+  /*  margin: 5px; */
+}
+.section-carrito .btn__cerrarCarrito:hover {
+  color: crimson;
+}
 .section-carrito .btn__enviarCarrito {
   font-size: 30px;
   background-color: #141414;
   color: white;
-  padding: 5px;
-  border-radius: 3px;
+  padding: 10px;
+  border-radius: 50px;
   margin: 5px;
   cursor: pointer;
   margin-left: 80%;
@@ -1008,19 +1025,20 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .section-carrito .btn__enviarCarrito:hover {
   background-color: #D074FF;
   color: #141414;
+  font-weight: 700;
 }
 .section-carrito .btn__borrarDelCarrito {
   background-color: white;
   border: none;
   cursor: pointer;
-}
-.section-carrito .btn__borrarDelCarrito img {
-  margin: 10px;
   width: 40px;
 }
-.section-carrito .btn__borrarDelCarrito:hover {
-  background-color: rgba(220, 20, 60, 0.247);
-  border-radius: 50%;
+.section-carrito .btn__borrarDelCarrito img {
+  margin: 5px;
+  width: 30px;
+}
+.section-carrito .btn__borrarDelCarrito img:hover {
+  width: 32px;
 }
 .section-carrito h2 {
   text-transform: uppercase;
@@ -1029,7 +1047,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   justify-content: center;
   padding: 10px;
   background-color: white;
-  color: #B02CA9;
+  color: #141414;
   margin-top: 5%;
 }
 .section-carrito .carrito-img {
