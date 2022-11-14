@@ -65,6 +65,19 @@ class CarritoController extends CarritoModel {
             console.error(error)
         }
     }
+
+    btnCerrarCarrito(){
+        /* const elemSectionCarrito = document.getElementsByClassName('section-carrito')[0] */
+        const elemSectionCarritoVisible = document.getElementsByClassName('section-carrito--visible')[0] 
+
+        if (elemSectionCarritoVisible.className.includes('--visible')) elemSectionCarritoVisible.classList.remove('section-carrito--visible')
+    }
+    
+    btnVaciarCarrito(){
+        this.carrito.length = 0
+        renderTablaCarrito(this.carrito)
+    }
+
 }
 
 const carritoController = new CarritoController()
