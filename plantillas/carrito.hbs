@@ -1,5 +1,5 @@
 {{#if carrito.length }}
-    <button class="btn__cerrarCarrito" onclick="carritoController.btnCerrarCarrito()"><i class="fas fa-times-circle"></i></button>
+    <button class="btn btn__cerrarCarrito" onclick="carritoController.btnCerrarCarrito()"><i class="fas fa-times-circle"></i></button>
  
     <h3>Carrito:</h3>
 
@@ -31,17 +31,20 @@
             {{/if}}
             
             <td>
-                <button onclick="carritoController.borrarProductoCarrito({{id}})" class="btn__borrarDelCarrito"><img src="../img/svg/99747_recycle_bin_full_icon.png" alt=""></button>
+                <button onclick="carritoController.borrarProductoCarrito({{id}})" class="btn btn__borrarDelCarrito"><img src="../img/svg/99747_recycle_bin_full_icon.png" alt=""></button>
             </td>
         </tr>
          {{/each}}
     </table>
-    <h4>Total: $</h4>
-    <button class="btn__vaciarCarrito" onclick="carritoController.btnVaciarCarrito()" >Vaciar carrito</button>
-    <button class="btn__enviarCarrito" onclick="carritoController.enviarCarrito()">Enviar</button>
+    <h4>Total $<span id="total-precio">0</span></h4>
+
+    <div class="btn btn-carrito">
+        <button class="btn btn__vaciarCarrito" onclick="carritoController.btnVaciarCarrito()" >Vaciar carrito</button>
+        <button class="btn btn__enviarCarrito" onclick="carritoController.enviarCarrito()">Enviar</button>
+    </div>
 {{else}}
-    <button class="btn__cerrarCarrito" onclick="carritoController.btnCerrarCarrito()"><i class="fas fa-times-circle"></i></button>
+    <button class="btn btn__cerrarCarrito" onclick="carritoController.btnCerrarCarrito()"><i class="fas fa-times-circle"></i></button>
     <img src="../img/svg/9021613_smiley_sad_bold_icon.svg" alt="Carita triste" class="carrito-img">
-    <h2>Oh no! Tu carrito esta vacio </h2>
-    <button class="btn__irAAgregarCarrito" onclick="carritoController.btnCerrarCarrito()">Ir a agregar productos</button>
+    <h2>Oh no! Tu carrito esta vacío </h2>
+    <button class="btn btn__irAAgregarCarrito" onclick="carritoController.btnCerrarCarrito()">Ir a agregar productos</button>
 {{/if}}

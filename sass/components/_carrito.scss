@@ -32,51 +32,76 @@
         margin-left: 5%;  
     }
 
-    .btn__cerrarCarrito {
-        margin-left: 95%;
-        font-size: 30px;
-        background-color: white;
-        border: none;
-        padding: 5px;
-
-
-        &:hover {
-            color: crimson;
-        }
-    }
-
-    .btn__enviarCarrito  {
-        font-size: 30px;
-        background-color: $colorTipografia;
+    .btn {
+        font-size: 25px;
         color: white;
-        padding: 10px;
+        padding: 8px;
         border-radius: 50px;
         margin: 5px;
         cursor: pointer;
-        margin-left: 80%;
-
-        &:hover {
-            background-color: $colorSecundario;
-            color: $colorTipografia;
-            font-weight: 700;
-        }
-    }
-
-    .btn__borrarDelCarrito {
         background-color: white;
+        text-transform: uppercase;
         border: none;
-        cursor: pointer;
-        width: 40px;
 
-        & img{
-            margin: 5px;
-            width: 30px;
 
-            &:hover{
-                width: 32px;
+        &.btn__cerrarCarrito {
+            margin-left: 95%;
+            color: $colorTipografia;
+            border: none;
+            border-radius: 0%;
+
+            &:hover {
+                color: crimson;
             }
         }
 
+        
+        &.btn__borrarDelCarrito { 
+
+            border: none;
+            width: 45px;
+            
+            & img{
+                width: 30px;
+                
+                &:hover{
+                    width: 32px;
+                }
+            }
+        }
+
+        &.btn-carrito{
+            display: flex;
+            justify-content: flex-end;
+            
+        }
+
+        &.btn__vaciarCarrito {
+            background-color: grey;
+
+            &:hover {
+                background-color:crimson;
+                color: $colorTipografia;
+                border: 2px solid $colorTipografia;
+            }
+        }
+        &.btn__enviarCarrito, &.btn__irAAgregarCarrito   {
+            background-color: $colorTipografia;
+            
+            &:hover {
+                background-color: $colorSecundario;
+                color: $colorTipografia;
+                border: 2px solid $colorTipografia;
+
+            }
+
+        }
+
+        &.btn__irAAgregarCarrito {
+            margin-left: 30%;
+            margin-top: 10px;
+        }
+      
     }
 
     h2 {
@@ -110,9 +135,12 @@
 
     .carrito-img{
         width: 25%;
-        margin-left: 35%;
+        margin-left: 38%;
         margin-top: 5%;
         
+    }
+    #carrito-enviado {
+        color: #2ECC71;
     }
     @media (max-width: 768px) {  
         
@@ -132,45 +160,54 @@
             margin-left: 2%;  
         }
 
-        .btn__enviarCarrito  {
-            margin-left: 70%;
-            font-size: 20px
+        .btn {
+            font-size: 15px;
 
-        }
-            
-        .btn__borrarDelCarrito {
-            & img{
-                margin: 7px;
-                width: 30px;
+            &.btn__cerrarCarrito {
+                margin-left: 90%;
+                margin-right: 5px;
             }
-        }
-
-        .btn__cerrarCarrito {
-            margin-left: 90%;
-            font-size: 20px;
     
+            &.btn__borrarDelCarrito { 
+                width: 35px;
+                margin: 0%;
+                padding: 0%;
+                
+                & img{
+                    display: none;
+                }
+
+                &::before{
+                    content: 'Borrar';
+                    text-transform: capitalize;
+                    font-size: 12px;
+                    color:crimson;
+                }
+            }
+
+            &.btn__irAAgregarCarrito {
+                margin-left: 20%;
+                margin-top: 5px;
+            }
+          
         }
 
         h2 {
-
-            font-size: 25px;
+            font-size: 22px;
             margin-top: 3%;
         }
 
         h3,h4 {
             font-size: 20px;
-            padding: 8px;
+            padding: 5px;
         }
 
         h4 {
-            margin-left: 40%;
+            margin-left: 45%;
         }
     
         .carrito-img{
-            width: 25%;
-            margin-left: 40%;
-            margin-top: 2%;
-            
+            display: none;
         }
 
     }

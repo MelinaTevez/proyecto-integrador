@@ -999,43 +999,59 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin-right: 5%;
   margin-left: 5%;
 }
-.section-carrito .btn__cerrarCarrito {
-  margin-left: 95%;
-  font-size: 30px;
-  background-color: white;
-  border: none;
-  padding: 5px;
-}
-.section-carrito .btn__cerrarCarrito:hover {
-  color: crimson;
-}
-.section-carrito .btn__enviarCarrito {
-  font-size: 30px;
-  background-color: #141414;
+.section-carrito .btn {
+  font-size: 25px;
   color: white;
-  padding: 10px;
+  padding: 8px;
   border-radius: 50px;
   margin: 5px;
   cursor: pointer;
-  margin-left: 80%;
-}
-.section-carrito .btn__enviarCarrito:hover {
-  background-color: #D074FF;
-  color: #141414;
-  font-weight: 700;
-}
-.section-carrito .btn__borrarDelCarrito {
   background-color: white;
+  text-transform: uppercase;
   border: none;
-  cursor: pointer;
-  width: 40px;
 }
-.section-carrito .btn__borrarDelCarrito img {
-  margin: 5px;
+.section-carrito .btn.btn__cerrarCarrito {
+  margin-left: 95%;
+  color: #141414;
+  border: none;
+  border-radius: 0%;
+}
+.section-carrito .btn.btn__cerrarCarrito:hover {
+  color: crimson;
+}
+.section-carrito .btn.btn__borrarDelCarrito {
+  border: none;
+  width: 45px;
+}
+.section-carrito .btn.btn__borrarDelCarrito img {
   width: 30px;
 }
-.section-carrito .btn__borrarDelCarrito img:hover {
+.section-carrito .btn.btn__borrarDelCarrito img:hover {
   width: 32px;
+}
+.section-carrito .btn.btn-carrito {
+  display: flex;
+  justify-content: flex-end;
+}
+.section-carrito .btn.btn__vaciarCarrito {
+  background-color: grey;
+}
+.section-carrito .btn.btn__vaciarCarrito:hover {
+  background-color: crimson;
+  color: #141414;
+  border: 2px solid #141414;
+}
+.section-carrito .btn.btn__enviarCarrito, .section-carrito .btn.btn__irAAgregarCarrito {
+  background-color: #141414;
+}
+.section-carrito .btn.btn__enviarCarrito:hover, .section-carrito .btn.btn__irAAgregarCarrito:hover {
+  background-color: #D074FF;
+  color: #141414;
+  border: 2px solid #141414;
+}
+.section-carrito .btn.btn__irAAgregarCarrito {
+  margin-left: 30%;
+  margin-top: 10px;
 }
 .section-carrito h2 {
   text-transform: uppercase;
@@ -1066,8 +1082,11 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .section-carrito .carrito-img {
   width: 25%;
-  margin-left: 35%;
+  margin-left: 38%;
   margin-top: 5%;
+}
+.section-carrito #carrito-enviado {
+  color: #2ECC71;
 }
 @media (max-width: 768px) {
   .section-carrito {
@@ -1085,33 +1104,44 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     margin-right: 2%;
     margin-left: 2%;
   }
-  .section-carrito .btn__enviarCarrito {
-    margin-left: 70%;
-    font-size: 20px;
+  .section-carrito .btn {
+    font-size: 15px;
   }
-  .section-carrito .btn__borrarDelCarrito img {
-    margin: 7px;
-    width: 30px;
-  }
-  .section-carrito .btn__cerrarCarrito {
+  .section-carrito .btn.btn__cerrarCarrito {
     margin-left: 90%;
-    font-size: 20px;
+    margin-right: 5px;
+  }
+  .section-carrito .btn.btn__borrarDelCarrito {
+    width: 35px;
+    margin: 0%;
+    padding: 0%;
+  }
+  .section-carrito .btn.btn__borrarDelCarrito img {
+    display: none;
+  }
+  .section-carrito .btn.btn__borrarDelCarrito::before {
+    content: "Borrar";
+    text-transform: capitalize;
+    font-size: 12px;
+    color: crimson;
+  }
+  .section-carrito .btn.btn__irAAgregarCarrito {
+    margin-left: 20%;
+    margin-top: 5px;
   }
   .section-carrito h2 {
-    font-size: 25px;
+    font-size: 22px;
     margin-top: 3%;
   }
   .section-carrito h3, .section-carrito h4 {
     font-size: 20px;
-    padding: 8px;
+    padding: 5px;
   }
   .section-carrito h4 {
-    margin-left: 40%;
+    margin-left: 45%;
   }
   .section-carrito .carrito-img {
-    width: 25%;
-    margin-left: 40%;
-    margin-top: 2%;
+    display: none;
   }
 }
 
