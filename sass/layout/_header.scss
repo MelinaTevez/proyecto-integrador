@@ -50,12 +50,13 @@
         font-size: 20px;
         padding: 0.5em 2em;
         text-decoration: none;
+        
+        &:hover{
+            color:$colorBase;
+          
+        }
     }
 
-    &__nav-link:hover{
-        color:$colorBase;
-        text-decoration: underline;
-    }
     
     @media (max-width: 768px) {
         & {

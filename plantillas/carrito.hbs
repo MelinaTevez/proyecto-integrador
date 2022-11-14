@@ -1,6 +1,8 @@
 {{#if carrito.length }}
     <button class="btn__cerrarCarrito"><i class="fas fa-times-circle"></i></button>
  
+    <h3>Tu carrito:</h3>
+
     <table>
         <tr>
             <th>Nombre</th>
@@ -29,14 +31,15 @@
             {{/if}}
             
             <td>
-                <button onclick="carritoController.borrarProductoCarrito({{id}})" class="btn__borrarDelCarrito"><img src="../img/svg/and_bag_ecommerce_remove_shopping_icon.svg" alt=""></button>
+                <button onclick="carritoController.borrarProductoCarrito({{id}})" class="btn__borrarDelCarrito"><img src="../img/svg/99747_recycle_bin_full_icon.png" alt=""></button>
             </td>
         </tr>
          {{/each}}
     </table>
+    <h4>Total: $</h4>
     <button class="btn__enviarCarrito" onclick="carritoController.enviarCarrito()">Enviar</button>
 {{else}}
     <button class="btn__cerrarCarrito"><i class="fas fa-times-circle"></i></button>
     <h2>El carrito está vacío</h2>
-    <img src="../img/svg/and_bag_delete_ecommerce_shopping_icon.svg" alt="Bag vacia" class="carrito-img">
+    <img src="../img/svg/9021613_smiley_sad_bold_icon.svg" alt="Bag vacia" class="carrito-img">
 {{/if}}

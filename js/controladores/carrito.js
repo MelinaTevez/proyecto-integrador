@@ -59,7 +59,7 @@ class CarritoController extends CarritoModel {
             this.carrito = []
             localStorage.setItem('carrito', JSON.stringify(this.carrito))
 
-            elemSectionCarrito.innerHTML = '<h2>El carrito fue enviado con éxito</h2>'
+            elemSectionCarrito.innerHTML = '<h2>El carrito fue enviado con éxito</h2> <img src="../img/svg/299110_check_sign_icon.svg" alt="Check Icon" class="carrito-img">' 
 
         } catch (error) {
             console.error(error)

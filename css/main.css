@@ -75,7 +75,6 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .nav-bar__nav-link:hover {
   color: #fff8f8;
-  text-decoration: underline;
 }
 @media (max-width: 768px) {
   .nav-bar {
@@ -364,7 +363,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   .card__button {
     font-size: 14px;
     margin: 5%;
-    margin-left: 18%;
+    margin-left: 10%;
   }
   .card__button:hover {
     box-shadow: none;
@@ -1001,13 +1000,11 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin-left: 5%;
 }
 .section-carrito .btn__cerrarCarrito {
-  /*    margin-right: 0; */
   margin-left: 95%;
   font-size: 30px;
   background-color: white;
   border: none;
   padding: 5px;
-  /*  margin: 5px; */
 }
 .section-carrito .btn__cerrarCarrito:hover {
   color: crimson;
@@ -1042,17 +1039,34 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .section-carrito h2 {
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 38px;
   display: flex;
   justify-content: center;
   padding: 10px;
   background-color: white;
   color: #141414;
-  margin-top: 5%;
+  margin-top: 3%;
+}
+.section-carrito h3, .section-carrito h4 {
+  text-transform: uppercase;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  color: #141414;
+  margin-top: 1%;
+}
+.section-carrito h4 {
+  margin-left: 50%;
+  padding: 10px;
+  background-color: white;
+  color: #141414;
+  margin-top: 1%;
 }
 .section-carrito .carrito-img {
-  width: 30%;
-  margin-left: 38%;
+  width: 25%;
+  margin-left: 35%;
   margin-top: 5%;
 }
 @media (max-width: 768px) {
@@ -1079,9 +1093,20 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     margin: 7px;
     width: 30px;
   }
+  .section-carrito .btn__cerrarCarrito {
+    margin-left: 90%;
+    font-size: 20px;
+  }
   .section-carrito h2 {
     font-size: 25px;
     margin-top: 3%;
+  }
+  .section-carrito h3, .section-carrito h4 {
+    font-size: 20px;
+    padding: 8px;
+  }
+  .section-carrito h4 {
+    margin-left: 40%;
   }
   .section-carrito .carrito-img {
     width: 25%;

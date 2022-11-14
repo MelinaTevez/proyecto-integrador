@@ -1,4 +1,5 @@
 class FormularioAlta {
+
     inputs  = null
     form = null
     button = null
@@ -6,7 +7,7 @@ class FormularioAlta {
     //Expresiones Regulares
     regExpValidar = [
         /^.+$/,      // regexp nombre
-        /^.+$/,      // regexp precio
+        /^[0-9]+$/,      // regexp precio
         /^[0-9]+$/,  // regexp stock
         /^.+$/,      // regexp marca
         /^.+$/,      // regexp categoria
