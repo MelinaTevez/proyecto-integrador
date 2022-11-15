@@ -6,7 +6,7 @@ class FormularioAlta {
     camposValidos = [false, false, false, false, false, false, false]
     //Expresiones Regulares
     regExpValidar = [
-        /^.+$/,      // regexp nombre
+        /^.,+$/  ,  // regexp nombre
         /^[0-9]+$/,      // regexp precio
         /^[0-9]+$/,  // regexp stock
         /^.+$/,      // regexp marca
@@ -65,7 +65,7 @@ class FormularioAlta {
         //console.log(valor, validador, index)
 
         if (!validador.test(valor)) {
-            this.setCustomValidityJS("Error: Este campo no es válido", index)
+            this.setCustomValidityJS("Atención: Este campo no es válido", index)
             this.camposValidos[index] = false
             this.button.disabled = true
             return null // break

@@ -65,9 +65,9 @@ class CarritoController extends CarritoModel {
             elemSectionCarrito.innerHTML = `
                 <button class="btn btn__cerrarCarrito" onclick="carritoController.btnCerrarCarrito()"><i class="fas fa-times-circle"></i></button>
                 <h2 id="carrito-enviado">El carrito fue enviado con éxito</h2> 
-                <img src="../img/svg/299110_check_sign_icon.svg" alt="Check Icon" class="carrito-img">
-
                 `
+                /*          <img src="../img/svg/299110_check_sign_icon.svg" alt="Check Icon" class="carrito-img">
+          */
 
         } catch (error) {
             console.error(error)

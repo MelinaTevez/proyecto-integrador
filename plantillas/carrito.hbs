@@ -31,7 +31,7 @@
             {{/if}}
             
             <td>
-                <button onclick="carritoController.borrarProductoCarrito({{id}})" class="btn btn__borrarDelCarrito"><img src="../img/svg/99747_recycle_bin_full_icon.png" alt=""></button>
+                <button onclick="carritoController.borrarProductoCarrito({{id}})" class="btn btn__borrarDelCarrito">Borrar</button>
             </td>
         </tr>
          {{/each}}
@@ -44,7 +44,7 @@
     </div>
 {{else}}
     <button class="btn btn__cerrarCarrito" onclick="carritoController.btnCerrarCarrito()"><i class="fas fa-times-circle"></i></button>
-    <img src="../img/svg/9021613_smiley_sad_bold_icon.svg" alt="Carita triste" class="carrito-img">
+   {{!--  <img src="../img/svg/9021613_smiley_sad_bold_icon.svg" alt="Carita triste" class="carrito-img"> --}}
     <h2>Oh no! Tu carrito esta vacío </h2>
     <button class="btn btn__irAAgregarCarrito" onclick="carritoController.btnCerrarCarrito()">Ir a agregar productos</button>
 {{/if}}

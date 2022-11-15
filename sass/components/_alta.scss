@@ -17,6 +17,7 @@
             letter-spacing: 0;
         }
     }
+
     h2 {
          font-size: 30px;
          text-transform: uppercase;
@@ -47,16 +48,20 @@
             border-top-right-radius: 15px;
             padding-left: 5%;
         }
+
+
+        & input, & label {
+            display: block;
+            margin: 5px;
+            margin-left: 15%;
+            font-size: 20px;
+            font-weight: 400;
+            width: 50vw;
+
+        }
+
     }
 
-     input,label {
-        display: block;
-        margin: 5px;
-        margin-left: 15%;
-        font-size: 20px;
-        font-weight: 400;
-        width: 50vw;
-    }
     
     button {
         display: block; 
@@ -84,11 +89,7 @@
         margin-left: 40%;
         margin-bottom: 20px;
     }
-   /*  input[type="checkbox"], #label-envio{ */
-       /*  display: inline;
-        width: 15px;
-        height: 15px;
-        margin-top: 10px; */
+  
     
 
     form div {
@@ -101,6 +102,8 @@
         border-radius: 5px;
         display: none;
     }
+
+
 
     table,th, td {
         border: 1px solid $colorTipografia;
