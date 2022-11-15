@@ -1,37 +1,75 @@
 .section-cards {
     background-color: $colorBase;
 
-
-    &__header h1{
-        font-size: 60px;
-        color: $colorTipografia ;
-        background-color: $colorCuaternario;
-        letter-spacing: 5px;
-        text-transform: uppercase;
-   /*      text-shadow:0 0 10px $colorSecundario; */
-        height: 30vh;
+    &__header{
+        background-image: url(../../img/otras-img/JUANAMARI.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 79vh;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items:center;
-        padding: 3%;
-    }
+        flex-direction: column;
+        margin: 0%;
+        text-transform: uppercase;
 
-    &__header p{
+        & h1{
+            font-size: 100px;
+            color: $colorBase;
+            font-family: 'Oswald', 'sans-serif';
+            text-shadow: 3px 3px 3px rgba(2, 2, 2, 0.486);
+            letter-spacing: 15px;
+            font-weight: 400;
+
+        }
+
+        & h3{
+            font-size: 40px;
+            font-weight: 400;
+            color: $colorTerciario;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 5px;
+    
+        }
+
+    } 
+
+    &__p {
         padding: 10px;
         font-size: 30px;
- /*        background-color: $colorCuaternario; */
+        background-color: $colorCuaternario;
         margin: 0;
     }
 
     @media (max-width: 768px) {
-        &__header h1{
-           font-size: 40px;
-           height: 20vh;
-           letter-spacing: 0;
-        }
+        &__header{
+            background-image: url(../../img/otras-img/Juana-Mari.png);
+            background-repeat: no-repeat;
+            background-position:center top;
+            height: 70vh;
+            width: auto;
+            margin: 0%;
+            padding: 0%;
+
     
-        &__header p{
-            font-size: 22px;
+            & h1{
+                font-size: 55px;
+                letter-spacing: 10px;
+            
+            }
+    
+            & h3{
+                font-size: 30px;
+                letter-spacing: 2px;
+        
+            }
+    
+        } 
+    
+        &__p {
+            padding: 7px;
+            font-size: 25px;
+            
         }
     }
      

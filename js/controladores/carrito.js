@@ -23,7 +23,7 @@ class CarritoController extends CarritoModel {
     }
 
     agregarAlCarrito(producto){
-        console.log(producto)
+        //console.log(producto)
 
         if(!this.elProductoEstaEnElCarrito(producto)) {
             producto.cantidad = 1
@@ -35,6 +35,9 @@ class CarritoController extends CarritoModel {
 
         localStorage.setItem('carrito', JSON.stringify(this.carrito))
 
+        /* const contadorCarrito = document.getElementById('search-bar__carrito-contador')
+        contadorCarrito.innerText = this.carrito.length */
+        
     }
 
     async borrarProductoCarrito(id){

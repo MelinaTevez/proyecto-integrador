@@ -16,9 +16,7 @@ async function renderPlantillaListado(listado){
 
 function agregarCarrito(e, id, ref) {
     e.preventDefault()
-  /*   console.log(id)
-    console.log(ref) */
-
+    
     const producto = productoController.productos.find(producto => producto.id == id)
     //console.log(producto)
     carritoController.agregarAlCarrito(producto)
@@ -31,7 +29,7 @@ async function initInicio(){
     //console.log(productos)
     await renderPlantillaListado(productos)
 
-    document.querySelector('.section-cards__header p').innerHTML = `Se encontraron ${productos.length} productos`
+    document.querySelector('.section-cards__p').innerHTML = `Se encontraron ${productos.length} productos`
 
 
 }

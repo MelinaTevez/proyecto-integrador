@@ -76,7 +76,7 @@
 
     background-color: $colorPrimario;
     display: flex;
-    justify-content: space-around;
+/*     justify-content: space-around; */
 
     &__form-container {
         padding: 1em;
@@ -84,13 +84,14 @@
 
     &__logo-container {
         background-color: $colorPrimario;
-        margin-left: 10%; 
-        margin-right: 10%;
-        height: auto;
-        width: auto;
+        /* margin-left: 15%; 
+        margin-right: 10%; */
+/*         height: auto; */
+/*         width: 200px; */
     }
 
     &__logo-container img{
+/*         padding-left: 10px; */
         height: auto;
         width: auto;
     }
@@ -98,21 +99,27 @@
     &__form-container {
         background-color: $colorPrimario;
         display: flex;
-        flex-basis: 100%;
+        flex-basis: 70%;
         justify-content: center;
+
+        & img{
+/*             color:red; */
+            width: 50px;
+        }
     }
 
     &__form-label {
-       font-family: 'Montserrat', sans-serif;
-       font-size: 22px;
-       font-weight: 700;
+       font-family: 'Oswald', sans-serif;
+       text-transform: uppercase;
+       font-size: 20px;
+       font-weight: 400;
        background-color: $colorPrimario;
        color: $colorBase;
     }
 
     &__form-search {
         background-color: $colorBase;
-        width: 50%;
+        width: 40%;
         height: 30px;
         border: 3px solid $colorSecundario;
         border-radius: 50px;
@@ -121,20 +128,28 @@
     }
 
     &__form-submit {
-        background-color: $colorTerciario;
-        color: $colorBase;
+        background-color: $colorBase;
+        color: $colorTipografia;
         font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
         font-weight: 700;
         height: 30px;
-        border: 1px solid $colorTerciario;
-        border-radius: 10px;
+        border: 2px solid $colorTipografia;
+        border-radius: 50px;
         width: fit-content;
         padding: 5px;
+
+        &:hover{
+            background-color: $colorTipografia;
+            color: $colorBase;
+            border: 2px solid $colorBase;
+        }
 
     }
 
     &__carrito-container {
-        flex: 0 0 3em;
+        display: flex;
+        justify-content: center;
         background-color: $colorPrimario;
        
     }
@@ -144,6 +159,17 @@
         height: 100%;
     
     }
+
+/*     #search-bar__carrito-contador {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        margin-left: 0%;
+        text-align: justify;
+        font-size: 30px;
+        background-color: $colorPrimario;
+    
+    } */
 
     @media (max-width: 768px) {  
         

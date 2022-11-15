@@ -90,38 +90,54 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .search-bar {
   background-color: #AD5ED6;
   display: flex;
-  justify-content: space-around;
+  /*     justify-content: space-around; */
+  /*     #search-bar__carrito-contador {
+          width: 30px;
+          height: 30px;
+          margin: 5px;
+          margin-left: 0%;
+          text-align: justify;
+          font-size: 30px;
+          background-color: $colorPrimario;
+
+      } */
 }
 .search-bar__form-container {
   padding: 1em;
 }
 .search-bar__logo-container {
   background-color: #AD5ED6;
-  margin-left: 10%;
-  margin-right: 10%;
-  height: auto;
-  width: auto;
+  /* margin-left: 15%; 
+  margin-right: 10%; */
+  /*         height: auto; */
+  /*         width: 200px; */
 }
 .search-bar__logo-container img {
+  /*         padding-left: 10px; */
   height: auto;
   width: auto;
 }
 .search-bar__form-container {
   background-color: #AD5ED6;
   display: flex;
-  flex-basis: 100%;
+  flex-basis: 70%;
   justify-content: center;
 }
+.search-bar__form-container img {
+  /*             color:red; */
+  width: 50px;
+}
 .search-bar__form-label {
-  font-family: "Montserrat", sans-serif;
-  font-size: 22px;
-  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
   background-color: #AD5ED6;
   color: #fff8f8;
 }
 .search-bar__form-search {
   background-color: #fff8f8;
-  width: 50%;
+  width: 40%;
   height: 30px;
   border: 3px solid #D074FF;
   border-radius: 50px;
@@ -129,20 +145,27 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin-right: 1em;
 }
 .search-bar__form-submit {
-  background-color: #ED93EC;
-  color: #fff8f8;
+  background-color: #fff8f8;
+  color: #141414;
   font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
   font-weight: 700;
   height: 30px;
-  border: 1px solid #ED93EC;
-  border-radius: 10px;
+  border: 2px solid #141414;
+  border-radius: 50px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 5px;
 }
+.search-bar__form-submit:hover {
+  background-color: #141414;
+  color: #fff8f8;
+  border: 2px solid #fff8f8;
+}
 .search-bar__carrito-container {
-  flex: 0 0 3em;
+  display: flex;
+  justify-content: center;
   background-color: #AD5ED6;
 }
 .search-bar__carrito-container img {
@@ -230,33 +253,60 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .section-cards {
   background-color: #fff8f8;
 }
-.section-cards__header h1 {
-  font-size: 60px;
-  color: #141414;
-  background-color: #F8D5F8;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  /*      text-shadow:0 0 10px $colorSecundario; */
-  height: 30vh;
+.section-cards__header {
+  background-image: url(../../img/otras-img/JUANAMARI.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 79vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  padding: 3%;
+  flex-direction: column;
+  margin: 0%;
+  text-transform: uppercase;
 }
-.section-cards__header p {
+.section-cards__header h1 {
+  font-size: 100px;
+  color: #fff8f8;
+  font-family: "Oswald", "sans-serif";
+  text-shadow: 3px 3px 3px rgba(2, 2, 2, 0.486);
+  letter-spacing: 15px;
+  font-weight: 400;
+}
+.section-cards__header h3 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #ED93EC;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
+}
+.section-cards__p {
   padding: 10px;
   font-size: 30px;
-  /*        background-color: $colorCuaternario; */
+  background-color: #F8D5F8;
   margin: 0;
 }
 @media (max-width: 768px) {
-  .section-cards__header h1 {
-    font-size: 40px;
-    height: 20vh;
-    letter-spacing: 0;
+  .section-cards__header {
+    background-image: url(../../img/otras-img/Juana-Mari.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 70vh;
+    width: auto;
+    margin: 0%;
+    padding: 0%;
   }
-  .section-cards__header p {
-    font-size: 22px;
+  .section-cards__header h1 {
+    font-size: 55px;
+    letter-spacing: 10px;
+  }
+  .section-cards__header h3 {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+  .section-cards__p {
+    padding: 7px;
+    font-size: 25px;
   }
 }
 
@@ -812,6 +862,13 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   }
 }
 
+.container-alta {
+  /*  input[type="checkbox"], #label-envio{ */
+  /*  display: inline;
+   width: 15px;
+   height: 15px;
+   margin-top: 10px; */
+}
 .container-alta h1 {
   font-size: 40px;
   text-align: center;
@@ -889,11 +946,6 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin-left: 40%;
   margin-bottom: 20px;
 }
-.container-alta input[type=checkbox] {
-  width: 15px;
-  height: 15px;
-  margin-top: 10px;
-}
 .container-alta form div {
   border: 1px solid white;
   background-color: crimson;
@@ -930,7 +982,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     font-size: 20px;
   }
   .container-alta__form-alta {
-    margin: 1px;
+    margin: 2%;
     width: 95vw;
   }
   .container-alta__form-alta h2 {
