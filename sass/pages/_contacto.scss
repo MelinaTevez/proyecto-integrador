@@ -1,10 +1,10 @@
-.search-bar {
+/* .search-bar {
     &__logo-container {
         margin-left: auto;
         margin-right: auto;
     }
 }
-
+ */
 .main-contacto h1{
     font-size: 40px;
     text-align: center;
@@ -66,32 +66,40 @@
         margin: 20px;
     }
 
-   /*  &__informacion legend{
-    } */
+    &__informacion {
+        & input{
+            border: 2px solid transparent;
+            border-bottom: 2px solid gray;
+            width: 55vw;
+            
+            &:focus {
+                border-bottom: 3px solid $colorTerciario;
+                outline: none;
+            }
+        }
 
-    &__informacion-preferencia{
-        display: flex;
-        flex-direction: row;
     }
-    &__informacion-preferencia label{
-        font-weight: 100;
-
-    }
-
     &__comentario textarea{
         margin: 10px; 
         width: 60vw;
         height: 10vh;
     }
 
-    & button{
+   & button {
         background-color: $colorTipografia;
         color: $colorTerciario;
         font-size: 30px;
-        padding: 5px;
-        border-radius: 5px;
+        border-radius: 50px;
+        padding: 8px;
         margin: 20px;
-    }
+        text-transform: uppercase;
+
+       &:hover{
+            background-color: $colorTerciario;
+            color: $colorTipografia;
+        } 
+   }
+    
 
     @media (max-width: 768px) {
         margin-left: 0;
@@ -115,8 +123,10 @@
             font-size: 18px;
         }
 
-        & button{
-            font-size: 22px;
-        }
+        & button {
+            font-size: 20px;
+            padding: 5px;
+            margin: 15px;
+       }
     }
 }

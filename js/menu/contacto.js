@@ -1,9 +1,9 @@
 
 /*     regExpValidarContacto = [
-        /^.,+$/ ,    // regexp nombre
-        /^.,+$/,      // regexp apellido
-        /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/,  // regexp email
-        /^[0-9]+$/,      // regexp telefono
+         /^[a-zA-ZÀ-ÿ\s]{1,40}$/ ,    // regexp nombre
+         /^[a-zA-ZÀ-ÿ\s]{1,40}$/,      // regexp apellido
+        /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,  // regexp email
+         /^\d{7,14}$/     // regexp telefono
 
  */
 function initContacto(){
@@ -18,9 +18,10 @@ function initContacto(){
 
 /* 
     console.log(inputName, inputApellido, inputEmail, inputTelefono) */
-    formContacto.addEventLister('submit', e => {
+/*     formContacto.addEventLister('submit', e => {
         e.preventDefault()
 
       
     })
+} */
 }

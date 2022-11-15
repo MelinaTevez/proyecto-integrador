@@ -669,11 +669,13 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   }
 }
 
-.search-bar__logo-container {
-  margin-left: auto;
-  margin-right: auto;
+/* .search-bar {
+    &__logo-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
-
+ */
 .main-contacto h1 {
   font-size: 40px;
   text-align: center;
@@ -699,8 +701,6 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   flex-direction: column;
   margin-left: 10%;
   margin-right: 10%;
-  /*  &__informacion legend{
-   } */
 }
 .form-contacto__motivo, .form-contacto__informacion, .form-contacto__comentario {
   border: 2px solid #141414;
@@ -729,12 +729,14 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .form-contacto__motivo select {
   margin: 20px;
 }
-.form-contacto__informacion-preferencia {
-  display: flex;
-  flex-direction: row;
+.form-contacto__informacion input {
+  border: 2px solid transparent;
+  border-bottom: 2px solid gray;
+  width: 55vw;
 }
-.form-contacto__informacion-preferencia label {
-  font-weight: 100;
+.form-contacto__informacion input:focus {
+  border-bottom: 3px solid #ED93EC;
+  outline: none;
 }
 .form-contacto__comentario textarea {
   margin: 10px;
@@ -745,9 +747,14 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   background-color: #141414;
   color: #ED93EC;
   font-size: 30px;
-  padding: 5px;
-  border-radius: 5px;
+  border-radius: 50px;
+  padding: 8px;
   margin: 20px;
+  text-transform: uppercase;
+}
+.form-contacto button:hover {
+  background-color: #ED93EC;
+  color: #141414;
 }
 @media (max-width: 768px) {
   .form-contacto {
@@ -766,7 +773,9 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     font-size: 18px;
   }
   .form-contacto button {
-    font-size: 22px;
+    font-size: 20px;
+    padding: 5px;
+    margin: 15px;
   }
 }
 
@@ -862,13 +871,6 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   }
 }
 
-.container-alta {
-  /*  input[type="checkbox"], #label-envio{ */
-  /*  display: inline;
-   width: 15px;
-   height: 15px;
-   margin-top: 10px; */
-}
 .container-alta h1 {
   font-size: 40px;
   text-align: center;
@@ -905,7 +907,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   border: 2px solid #141414;
   border-radius: 15px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 5%;
   width: 70vw;
 }
 .container-alta__form-alta h2 {
@@ -916,7 +918,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   border-top-right-radius: 15px;
   padding-left: 5%;
 }
-.container-alta input, .container-alta label {
+.container-alta__form-alta input, .container-alta__form-alta label {
   display: block;
   margin: 5px;
   margin-left: 15%;
@@ -924,13 +926,24 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   font-weight: 400;
   width: 50vw;
 }
+.container-alta__form-alta #envio, .container-alta__form-alta #label-envio {
+  margin: 0;
+  margin-left: 13%;
+  margin-top: 5px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+}
 .container-alta button {
   display: block;
   background-color: rgb(50, 190, 50);
   color: white;
-  font-size: 30px;
-  padding: 5px;
-  border-radius: 3px;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-family: "Montserrat", "sans-serif";
   margin: 5px;
   cursor: pointer;
 }
@@ -968,7 +981,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 .container-alta td button {
   width: auto;
-  font-size: 15px;
+  font-size: 12px;
 }
 .container-alta table {
   width: 98%;
@@ -984,17 +997,26 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   .container-alta__form-alta {
     margin: 2%;
     width: 95vw;
+    border: none;
+    border-radius: none;
+    margin-bottom: 30px;
   }
   .container-alta__form-alta h2 {
-    width: 95vw;
+    width: 97vw;
   }
   .container-alta label, .container-alta input {
     font-size: 18px;
     margin-left: 10px;
     width: 90vw;
   }
+  .container-alta #envio, .container-alta #label-envio {
+    margin: 0;
+    margin-left: 2%;
+    margin-top: 5px;
+    padding: 0;
+  }
   .container-alta button {
-    font-size: 22px;
+    font-size: 20px;
   }
   .container-alta form div {
     font-weight: 400;
@@ -1009,14 +1031,17 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     font-size: 10px;
   }
   .container-alta td button {
-    width: auto;
-    font-size: 10px;
-    padding: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 8px;
+    padding: 1px;
+    margin: 2px;
   }
   .container-alta table {
     width: 95vw;
     margin: 1px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 }
 
