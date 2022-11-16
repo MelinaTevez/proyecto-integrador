@@ -1,7 +1,7 @@
 
 <main class="main-contacto">
     <h1>CONTACTATE CON NOSOTROS!</h1>
-    <form action="" class="form-contacto">
+    <form action="" id="formulario-contacto" class="form-contacto">
 
         <div class="form-contacto__motivo">
             <h2>Motivo de tu consulta</h2>
@@ -17,24 +17,32 @@
             </select>
         </div>
 
-        <div class="form-contacto__informacion">
+        <div id="form-contacto__informacion" class="form-contacto__info">
             <h2>Información de contacto</h2>
 
-            <label for="nombre-contacto">Nombre</label>
-            <input type="text" name="nombre" id="nombre-contacto">
-            <div class="informacion__div"></div>
+            <div class="form-contacto__grupo" id="grupo__nombre">
+                <label for="nombre-contacto" class="grupo__label">Nombre</label>
+                <input type="text" name="nombre" id="nombre-contacto" class="grupo__input">
+                <p class="form-contacto__input-error">Este campo no es valido</p>
+            </div>
 
-            <label for="apellido">Apellido</label>
-            <input type="text" name="apellido" id="apellido">
-            <div class="informacion__div"></div>
+            <div class="form-contacto__grupo" id="grupo__apellido">
+                <label for="apellido" class="grupo__label">Apellido</label>
+                <input type="text" name="apellido" id="apellido" class="grupo__input">
+                <p class="form-contacto__input-error">Este campo no es valido</p>
+            </div>
 
-            <label for="email">Dirección de correo electrónico</label>
-            <input type="email" name="email" id="email">
-            <div class="informacion__div"></div>
+            <div class="form-contacto__grupo" id="grupo__email">
+                <label for="email" class="grupo__label">Dirección de correo electrónico</label>
+                <input type="email" name="email" id="email" class="grupo__input">
+                <p class="form-contacto__input-error">Este campo no es valido</p>
+            </div>
 
-            <label for="telefono">Teléfono</label>
-            <input type="tel" name="telefono" id="telefono">
-            <div class="informacion__div"></div>
+            <div class="form-contacto__grupo" id="grupo__telefono">
+                <label for="telefono" class="grupo__label">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" class="grupo__input">
+                <p class="form-contacto__input-error">Este campo no es valido</p>
+            </div>
 
         </div>
 
@@ -44,7 +52,7 @@
         </div>
 
         
-        <button class="form-contacto__btn-enviar">Enviar</button>
+        <button type="submit" class="form-contacto__btn-enviar">Enviar</button>
   
 
     </form>

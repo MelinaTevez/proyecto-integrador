@@ -669,13 +669,6 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   }
 }
 
-/* .search-bar {
-    &__logo-container {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
- */
 .main-contacto h1 {
   font-size: 40px;
   text-align: center;
@@ -755,6 +748,14 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .form-contacto button:hover {
   background-color: #ED93EC;
   color: #141414;
+}
+.form-contacto input .form-contacto__info-valido {
+  border: 3px solid green;
+  outline: none;
+}
+.form-contacto input .form-contacto__info-invalido {
+  border: 3px solid crimson;
+  outline: none;
 }
 @media (max-width: 768px) {
   .form-contacto {

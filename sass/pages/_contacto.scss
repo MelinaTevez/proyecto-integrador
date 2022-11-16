@@ -1,10 +1,4 @@
-/* .search-bar {
-    &__logo-container {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
- */
+
 .main-contacto h1{
     font-size: 40px;
     text-align: center;
@@ -76,9 +70,13 @@
                 border-bottom: 3px solid $colorTerciario;
                 outline: none;
             }
+
         }
 
+        
     }
+
+
     &__comentario textarea{
         margin: 10px; 
         width: 60vw;
@@ -99,7 +97,19 @@
             color: $colorTipografia;
         } 
    }
-    
+
+input {
+
+.form-contacto__info-valido {
+    border: 3px solid green;
+    outline: none;
+} 
+
+.form-contacto__info-invalido {
+    border: 3px solid crimson;
+    outline: none;
+}
+}
 
     @media (max-width: 768px) {
         margin-left: 0;
