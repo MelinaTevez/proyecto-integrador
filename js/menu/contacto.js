@@ -36,27 +36,26 @@ function initContacto(){
 
         if(expresion.test(input.value)){
 
-            console.log('ES VALIDO')
-           /*  document.getElementById(`grupo__${campo}`).classList.remove('form-contacto__info-invalido')
-            document.getElementById(`grupo__${campo}`).classList.add('form-contacto__info-valido') */
-            
-          } else{
-              console.log('ES INVALIDO')
-             /*  document.getElementById(`grupo__${campo}`).classList.add('form-contacto__info-invalido')
-              document.getElementById(`grupo__${campo}`).classList.remove('form-contacto__info-valido')
+            document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
+            document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
+            document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+        } else{
 
-              document.querySelector(`#grupo__${campo} .form-contacto__input-error'`).classList.add('form-contacto__input-error--activo') */
+            document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
+            document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
+            document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
              
         }
     }
+
     inputsContacto.forEach((input)=> {
         input.addEventListener('keyup', validarForm)
         input.addEventListener('blur', validarForm)
         
     })
+
     formContacto.addEventListener('submit', (e) => {
         e.preventDefault();
-
 
     })
 

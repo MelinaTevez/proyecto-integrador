@@ -1,6 +1,7 @@
 
 <main class="main-contacto">
     <h1>CONTACTATE CON NOSOTROS!</h1>
+
     <form action="" id="formulario-contacto" class="form-contacto">
 
         <div class="form-contacto__motivo">
@@ -20,28 +21,36 @@
         <div id="form-contacto__informacion" class="form-contacto__info">
             <h2>Información de contacto</h2>
 
-            <div class="form-contacto__grupo" id="grupo__nombre">
-                <label for="nombre-contacto" class="grupo__label">Nombre</label>
-                <input type="text" name="nombre" id="nombre-contacto" class="grupo__input">
-                <p class="form-contacto__input-error">Este campo no es valido</p>
+            <div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre">
+				</div>
+				<p class="formulario__input-error">El nombre no está escrito correctamente. Por favor, vuelve a intentar.</p>
+			</div>
+
+            <div class="formulario__grupo" id="grupo__apellido">
+                <label for="apellido" class="formulario__label">Apellido</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" name="apellido" id="apellido" class="formulario__input" >
+                </div>
+                <p class="formulario__input-error">El apellido no está escrito correctamente. Por favor, vuelve a intentar.</p>
             </div>
 
-            <div class="form-contacto__grupo" id="grupo__apellido">
-                <label for="apellido" class="grupo__label">Apellido</label>
-                <input type="text" name="apellido" id="apellido" class="grupo__input">
-                <p class="form-contacto__input-error">Este campo no es valido</p>
+            <div class="formulario__grupo" id="grupo__email">
+                <label for="email" class="formulario__label">Dirección de correo electrónico</label>
+                <div class="formulario__grupo-input">
+                    <input type="email" name="email" id="email" class="formulario__input" >
+                </div>
+                <p class="formulario__input-error">El e-mail no está escrito correctamente. Por favor, vuelve a intentar.</p>
             </div>
 
-            <div class="form-contacto__grupo" id="grupo__email">
-                <label for="email" class="grupo__label">Dirección de correo electrónico</label>
-                <input type="email" name="email" id="email" class="grupo__input">
-                <p class="form-contacto__input-error">Este campo no es valido</p>
-            </div>
-
-            <div class="form-contacto__grupo" id="grupo__telefono">
-                <label for="telefono" class="grupo__label">Teléfono</label>
-                <input type="tel" name="telefono" id="telefono" class="grupo__input">
-                <p class="form-contacto__input-error">Este campo no es valido</p>
+            <div class="formulario__grupo" id="grupo__telefono">
+                <label for="telefono" class="formulario__label">Teléfono</label>
+                <div class="formulario__grupo-input">
+                    <input type="tel" name="telefono" id="telefono" class="formulario__input" >
+                </div>
+                <p class="formulario__input-error">El teléfo no está escrito correctamente. Por favor, vuelve a intentar.</p>
             </div>
 
         </div>

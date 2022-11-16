@@ -695,7 +695,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin-left: 10%;
   margin-right: 10%;
 }
-.form-contacto__motivo, .form-contacto__informacion, .form-contacto__comentario {
+.form-contacto__motivo, .form-contacto__info, .form-contacto__comentario {
   border: 2px solid #141414;
   border-radius: 15px;
   margin: 20px;
@@ -722,12 +722,12 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .form-contacto__motivo select {
   margin: 20px;
 }
-.form-contacto__informacion input {
+.form-contacto__info input {
   border: 2px solid transparent;
   border-bottom: 2px solid gray;
   width: 55vw;
 }
-.form-contacto__informacion input:focus {
+.form-contacto__info input:focus {
   border-bottom: 3px solid #ED93EC;
   outline: none;
 }
@@ -749,20 +749,12 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   background-color: #ED93EC;
   color: #141414;
 }
-.form-contacto input .form-contacto__info-valido {
-  border: 3px solid green;
-  outline: none;
-}
-.form-contacto input .form-contacto__info-invalido {
-  border: 3px solid crimson;
-  outline: none;
-}
 @media (max-width: 768px) {
   .form-contacto {
     margin-left: 0;
     margin-right: 0;
   }
-  .form-contacto__motivo, .form-contacto__informacion, .form-contacto__comentario {
+  .form-contacto__motivo, .form-contacto__info, .form-contacto__comentario {
     border: 1px solid #141414;
     margin: 5px;
     width: 90vw;
@@ -778,6 +770,37 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     padding: 5px;
     margin: 15px;
   }
+}
+
+.formulario__input-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
+}
+.formulario__input-error-activo {
+  display: block;
+}
+.formulario__validacion-estado {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+}
+.formulario__grupo-correcto, .formulario__validacion-estado {
+  color: #1ed12d;
+  opacity: 1;
+}
+.formulario__grupo-incorrecto, .formulario__label {
+  color: #bb2929;
+}
+.formulario__grupo-incorrecto, .formulario__validacion-estado {
+  color: #bb2929;
+  opacity: 1;
+}
+.formulario__grupo-incorrecto, .formulario__input {
+  border: 3px solid #bb2929;
 }
 
 .footer {

@@ -25,7 +25,7 @@
     margin-right: 10%;
 
     &__motivo,
-    &__informacion,
+    &__info,
     &__comentario{
         border: 2px solid $colorTipografia;
         border-radius: 15px;
@@ -52,15 +52,18 @@
         font-weight: 700;
     } 
 
-    &__motivo label{
-        display: inline;
+    &__motivo {
+        & label{
+            display: inline;
+        }
+
+        & select{
+            margin: 20px;
+        }
     }
 
-    &__motivo select{
-        margin: 20px;
-    }
+    &__info {
 
-    &__informacion {
         & input{
             border: 2px solid transparent;
             border-bottom: 2px solid gray;
@@ -73,15 +76,13 @@
 
         }
 
-        
     }
-
 
     &__comentario textarea{
         margin: 10px; 
         width: 60vw;
         height: 10vh;
-    }
+    } 
 
    & button {
         background-color: $colorTipografia;
@@ -98,25 +99,12 @@
         } 
    }
 
-input {
-
-.form-contacto__info-valido {
-    border: 3px solid green;
-    outline: none;
-} 
-
-.form-contacto__info-invalido {
-    border: 3px solid crimson;
-    outline: none;
-}
-}
-
     @media (max-width: 768px) {
         margin-left: 0;
         margin-right: 0;
     
         &__motivo,
-        &__informacion,
+        &__info,
         &__comentario{
             border: 1px solid $colorTipografia;
             margin: 5px;
@@ -140,3 +128,44 @@ input {
        }
     }
 }
+
+.formulario {
+    
+    &__input-error {
+        font-size: 12px;
+        margin-bottom: 0;
+        display: none;
+    }
+
+    &__input-error-activo {
+        display: block;
+    }
+    
+    &__validacion-estado {
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        z-index: 100;
+        font-size: 16px;
+        opacity: 0;
+    }
+    &__grupo-correcto, &__validacion-estado {
+        color: #1ed12d;
+        opacity: 1;
+    }
+    
+    &__grupo-incorrecto, &__label {
+        color: #bb2929;
+    }
+    
+    &__grupo-incorrecto, &__validacion-estado {
+        color: #bb2929;
+        opacity: 1;
+    }
+    
+    &__grupo-incorrecto, &__input {
+        border: 3px solid #bb2929;
+    }
+}
+
+
