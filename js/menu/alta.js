@@ -6,13 +6,13 @@ class FormularioAlta {
     camposValidos = [false, false, false, false, false, false, false]
     //Expresiones Regulares
     regExpValidar = [
-        /^[a-zA-Z0-9\_\-]{4,16}$/,  // regexp nombre
+        /^.+$/,          // regexp nombre
         /^[0-9]+$/,      // regexp precio
-        /^[0-9]+$/,  // regexp stock
-        /^.{1,50}$/,      // regexp marca
-        /^.{1,50}$/,      // regexp categoria
-        /^.{1,150}$/,      // regexp detalles
-        /^.+$/,      // regexp foto
+        /^[0-9]+$/,      // regexp stock
+        /^.{1,50}$/,     // regexp marca
+        /^.{1,50}$/,     // regexp categoria
+        /^.{1,150}$/,    // regexp detalles
+        /^.+$/,          // regexp foto
     ]
 
     constructor(renderTablaAlta, guardarProducto){

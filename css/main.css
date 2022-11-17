@@ -147,6 +147,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   display: flex;
   justify-content: center;
   background-color: #AD5ED6;
+  cursor: pointer;
 }
 .search-bar__carrito-container img {
   width: 50px;
@@ -213,11 +214,12 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     margin-right: 0;
   }
   .search-bar #search-bar__carrito-contador {
-    width: 20px;
-    margin: 3px;
-    margin-left: 0;
-    padding: 1px;
-    font-size: 15px;
+    width: 25px;
+    margin: 0;
+    margin-right: 5px;
+    padding: 2px;
+    font-size: 18px;
+    color: #fff8f8;
   }
 }
 
@@ -267,10 +269,10 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../img/otras-img/juana-mari-hero.png);
+  background-image: linear-gradient(0deg, rgba(71, 36, 70, 0.2), rgba(71, 36, 70, 0.2)), url(../../img/otras-img/hero-jm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center bottom;
   height: 80vh;
   text-transform: uppercase;
 }
@@ -285,7 +287,7 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .section-cards__header h3 {
   font-size: 40px;
   font-weight: 400;
-  color: #ED93EC;
+  color: #141414;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 5px;
 }

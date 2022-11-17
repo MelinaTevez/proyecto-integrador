@@ -142,6 +142,7 @@
         display: flex;
         justify-content: center;
         background-color: $colorPrimario;
+        cursor: pointer;
        
     }
 
@@ -224,11 +225,12 @@
         }
 
         #search-bar__carrito-contador {
-            width: 20px;
-            margin: 3px;
-            margin-left: 0;
-            padding:1px;   
-            font-size: 15px;
+            width: 25px;
+            margin: 0;
+            margin-right: 5px;
+            padding:2px;   
+            font-size: 18px;
+            color:$colorBase;
         }
     }
 }
