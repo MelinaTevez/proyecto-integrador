@@ -269,11 +269,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  background-image: linear-gradient(0deg, rgba(71, 36, 70, 0.2), rgba(71, 36, 70, 0.2)), url(../../img/otras-img/hero-jm.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center bottom;
-  height: 80vh;
+  background-image: linear-gradient(0deg, #ED93EC, #D074FF);
+  height: 50vh;
   text-transform: uppercase;
 }
 .section-cards__header h1 {
@@ -299,13 +296,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 @media (max-width: 768px) {
   .section-cards__header {
-    /*  background-image: url(../../img/otras-img/Juana-Mari.png);
-     background-repeat: no-repeat;
-     background-position:center top;
-     height: 70vh;
-     width: auto;
-     margin: 0%;
-     padding: 0%; */
+    height: 40vh;
+    justify-content: center;
   }
   .section-cards__header h1 {
     font-size: 55px;
