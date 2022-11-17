@@ -90,16 +90,6 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 .search-bar {
   background-color: #AD5ED6;
   display: flex;
-  /*     #search-bar__carrito-contador {
-          width: 30px;
-          height: 30px;
-          margin: 5px;
-          margin-left: 0%;
-          text-align: justify;
-          font-size: 30px;
-          background-color: $colorPrimario;
-
-      } */
 }
 .search-bar__form-container {
   padding: 1em;
@@ -162,6 +152,21 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   width: 50px;
   height: 100%;
 }
+.search-bar #search-bar__carrito-contador {
+  width: 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 5px;
+  margin-left: 0%;
+  padding: 2px;
+  padding-bottom: 3px;
+  text-align: center;
+  font-size: 25px;
+  background-color: #fff8f8;
+  color: #141414;
+  border-radius: 50%;
+}
 @media (max-width: 768px) {
   .search-bar {
     padding: 0;
@@ -186,9 +191,10 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     display: none;
   }
   .search-bar__form-search {
-    width: 70px;
+    width: 80%;
     height: 25px;
     margin: 0;
+    margin-left: 5px;
   }
   .search-bar__form-submit {
     height: 25px;
@@ -205,6 +211,14 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     height: 100%;
     padding: 0.1em;
     padding-left: 0.3em;
+    margin-right: 0;
+  }
+  .search-bar #search-bar__carrito-contador {
+    width: 20px;
+    margin: 3px;
+    margin-left: 0;
+    padding: 1px;
+    font-size: 15px;
   }
 }
 
@@ -1195,14 +1209,23 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   color: crimson;
 }
 .section-carrito .btn.btn__borrarDelCarrito {
-  border: none;
-  width: 45px;
+  /*  border: none; */
+  font-size: 18px;
+  color: crimson;
+  margin: 0;
+  /* width: 45px;
+
+  & img{
+      width: 30px;
+
+      &:hover{
+          width: 32px;
+      }
+  } */
 }
-.section-carrito .btn.btn__borrarDelCarrito img {
-  width: 30px;
-}
-.section-carrito .btn.btn__borrarDelCarrito img:hover {
-  width: 32px;
+.section-carrito .btn.btn__borrarDelCarrito:hover {
+  border: 1px solid crimson;
+  padding: 3px;
 }
 .section-carrito .btn.btn-carrito {
   display: flex;
@@ -1287,18 +1310,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     margin-right: 5px;
   }
   .section-carrito .btn.btn__borrarDelCarrito {
-    width: 35px;
-    margin: 0%;
-    padding: 0%;
-  }
-  .section-carrito .btn.btn__borrarDelCarrito img {
-    display: none;
-  }
-  .section-carrito .btn.btn__borrarDelCarrito::before {
-    content: "Borrar";
-    text-transform: capitalize;
-    font-size: 12px;
-    color: crimson;
+    font-size: 10px;
+    padding: 1px;
   }
   .section-carrito .btn.btn__irAAgregarCarrito {
     margin-left: 20%;

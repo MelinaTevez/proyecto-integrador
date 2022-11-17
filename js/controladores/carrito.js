@@ -35,9 +35,30 @@ class CarritoController extends CarritoModel {
 
         localStorage.setItem('carrito', JSON.stringify(this.carrito))
 
-        /* const contadorCarrito = document.getElementById('search-bar__carrito-contador')
-        contadorCarrito.innerText = this.carrito.length */
+        this.contadorCarrito()
         
+    }
+
+    contadorCarrito(){
+
+        const carritoContador = document.getElementById('search-bar__carrito-contador')
+
+        let carrito = this.carrito;
+        let cantidadDeProdEnCarrito = 0;
+        
+        carrito.forEach(producto => {
+            cantidadDeProdEnCarrito = cantidadDeProdEnCarrito+ producto.cantidad; 
+        });
+        
+        carritoContador.innerHTML = cantidadDeProdEnCarrito;
+    
+    }
+
+    actualizarContadorCarrito(carrito) {
+     
+        const carritoContador = document.getElementById('search-bar__carrito-contador')      
+        carritoContador.innerHTML = carrito.length;
+       
     }
 
     async borrarProductoCarrito(id){
@@ -66,26 +87,30 @@ class CarritoController extends CarritoModel {
                 <button class="btn btn__cerrarCarrito" onclick="carritoController.btnCerrarCarrito()"><i class="fas fa-times-circle"></i></button>
                 <h2 id="carrito-enviado">El carrito fue enviado con éxito</h2> 
                 `
-                /*          <img src="../img/svg/299110_check_sign_icon.svg" alt="Check Icon" class="carrito-img">
-          */
-
+            ;
+              
+            this.actualizarContadorCarrito(this.carrito) 
+              
         } catch (error) {
             console.error(error)
         }
     }
 
     btnCerrarCarrito(){
-        /* const elemSectionCarrito = document.getElementsByClassName('section-carrito')[0] */
+        
         const elemSectionCarritoVisible = document.getElementsByClassName('section-carrito--visible')[0] 
 
         if (elemSectionCarritoVisible.className.includes('--visible')) elemSectionCarritoVisible.classList.remove('section-carrito--visible')
+        mostrarCarrito = false;
     }
     
     btnVaciarCarrito(){
-        this.carrito.length = 0
+        this.carrito.length = []
         renderTablaCarrito(this.carrito)
     }
 
+
+ 
 }
 
 const carritoController = new CarritoController()
