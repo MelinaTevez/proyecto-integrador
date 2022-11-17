@@ -62,18 +62,14 @@
         }
     }
 
-    &__info {
-
-        & input{
-            border: 2px solid transparent;
-            border-bottom: 2px solid gray;
-            width: 55vw;
-            
-            &:focus {
-                border-bottom: 3px solid $colorTerciario;
-                outline: none;
-            }
-
+    &__info input{
+        border: 2px solid transparent;
+        border-bottom: 2px solid gray;
+        width: 55vw;
+        
+        &:focus {
+            border-bottom: 3px solid $colorTerciario;
+            outline: none;
         }
 
     }
@@ -84,7 +80,7 @@
         height: 10vh;
     } 
 
-   & button {
+    & button {
         background-color: $colorTipografia;
         color: $colorTerciario;
         font-size: 30px;
@@ -97,7 +93,7 @@
             background-color: $colorTerciario;
             color: $colorTipografia;
         } 
-   }
+    }
 
     @media (max-width: 768px) {
         margin-left: 0;
@@ -110,21 +106,42 @@
             margin: 5px;
             width: 90vw;
         }
-    
+        
         & h2{
-            font-size: 20px;
+            text-align: center;
+            font-size: 18px;
         }
     
         & label, 
         & input,
         & legend{
-            font-size: 18px;
+            font-size: 15px;
         }
 
+        &__motivo {
+            text-align: center;
+
+            & label{
+                display: block;
+                margin: 3px;
+            }
+        }
+    
+        &__info input{
+            width: 75vw;
+             
+            &:focus {
+                border-bottom: 2px solid $colorTerciario;
+            }
+        }
+    
+        &__comentario textarea{
+            width: 85vw;
+        } 
+    
         & button {
             font-size: 20px;
-            padding: 5px;
-            margin: 15px;
+            padding: 8px;
        }
     }
 }
@@ -132,40 +149,97 @@
 .formulario {
     
     &__input-error {
-        font-size: 12px;
-        margin-bottom: 0;
+        font-size: 15px;
+        color:crimson;
+        margin-left: 8%;
         display: none;
+        
+        & i{
+            margin: 5px;
+        }
     }
 
     &__input-error-activo {
         display: block;
     }
     
-    &__validacion-estado {
-        position: absolute;
-        right: 10px;
-        bottom: 15px;
-        z-index: 100;
-        font-size: 16px;
-        opacity: 0;
+    &__grupo-valido .formulario__input {
+                &:focus {
+                    border-bottom: 3px solid #1bb81b;
+                }
+            }
+  
+    &__grupo-invalido .formulario__input {
+
+        &:focus {
+            border-bottom: 3px solid crimson;
+        }
     }
-    &__grupo-correcto, &__validacion-estado {
-        color: #1ed12d;
-        opacity: 1;
+
+    &__grupo-btn-enviar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__mensaje {
+        height: 45px;
+        line-height: 45px;
+        font-size: 18px;
+        font-weight: 700;
+        background: rgb(255, 85, 119);   
+        padding: 0 15px;
+        border-radius: 10px;
+        display: none;
     }
     
-    &__grupo-incorrecto, &__label {
-        color: #bb2929;
+    &__mensaje-activo {
+        display: block;
+    }
+
+    &__mensaje-exito {
+        font-size: 18px;
+        background-color: #4fca3e;
+        height: 45px;
+        line-height: 45px;
+        font-weight: 700;
+        padding: 0 15px;
+        border-radius: 10px;
+        display: none;
     }
     
-    &__grupo-incorrecto, &__validacion-estado {
-        color: #bb2929;
-        opacity: 1;
+    &__mensaje-exito-activo {
+        display: block;
     }
-    
-    &__grupo-incorrecto, &__input {
-        border: 3px solid #bb2929;
+
+    @media (max-width: 768px) {
+
+        &__input-error {
+            font-size: 10px;
+        }
+
+        &__grupo-valido .formulario__input {
+            &:focus {
+                border-bottom: 2px solid #1bb81b;
+            }
+        }
+      
+        &__grupo-invalido .formulario__input {
+            &:focus {
+                border-bottom: 2px solid crimson;
+            }
+        }
+
+        &__mensaje, &__mensaje-exito{
+            height: fit-content;
+            text-align: center;
+            line-height:20px;
+            font-size: 15px;
+            font-weight: 400;
+            margin: 10px;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
     }
 }
-
 

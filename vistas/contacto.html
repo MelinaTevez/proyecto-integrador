@@ -2,7 +2,7 @@
 <main class="main-contacto">
     <h1>CONTACTATE CON NOSOTROS!</h1>
 
-    <form action="" id="formulario-contacto" class="form-contacto">
+    <form action="" id="formulario-contacto" class="form-contacto" autocomplete="off">
 
         <div class="form-contacto__motivo">
             <h2>Motivo de tu consulta</h2>
@@ -26,7 +26,7 @@
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input" name="nombre" id="nombre">
 				</div>
-				<p class="formulario__input-error">El nombre no está escrito correctamente. Por favor, vuelve a intentar.</p>
+				<p class="formulario__input-error"><i class="fas fa-exclamation-triangle"></i>El nombre no está escrito correctamente. Por favor, vuelve a intentar.</p>
 			</div>
 
             <div class="formulario__grupo" id="grupo__apellido">
@@ -34,7 +34,7 @@
                 <div class="formulario__grupo-input">
                     <input type="text" name="apellido" id="apellido" class="formulario__input" >
                 </div>
-                <p class="formulario__input-error">El apellido no está escrito correctamente. Por favor, vuelve a intentar.</p>
+                <p class="formulario__input-error"><i class="fas fa-exclamation-triangle"></i>El apellido no está escrito correctamente. Por favor, vuelve a intentar.</p>
             </div>
 
             <div class="formulario__grupo" id="grupo__email">
@@ -42,7 +42,7 @@
                 <div class="formulario__grupo-input">
                     <input type="email" name="email" id="email" class="formulario__input" >
                 </div>
-                <p class="formulario__input-error">El e-mail no está escrito correctamente. Por favor, vuelve a intentar.</p>
+                <p class="formulario__input-error"><i class="fas fa-exclamation-triangle"></i>El e-mail no está escrito correctamente. Por favor, vuelve a intentar.</p>
             </div>
 
             <div class="formulario__grupo" id="grupo__telefono">
@@ -50,7 +50,7 @@
                 <div class="formulario__grupo-input">
                     <input type="tel" name="telefono" id="telefono" class="formulario__input" >
                 </div>
-                <p class="formulario__input-error">El teléfo no está escrito correctamente. Por favor, vuelve a intentar.</p>
+                <p class="formulario__input-error"><i class="fas fa-exclamation-triangle"></i>El teléfo no está escrito correctamente. Por favor, vuelve a intentar.</p>
             </div>
 
         </div>
@@ -60,8 +60,12 @@
             <textarea name="comentario" id="comentario" placeholder="Escribe aquí tu comentario..."></textarea>
         </div>
 
+        <p class="formulario__mensaje" id="formulario__mensaje"> Por favor rellena el formulario correctamente. </p>
         
-        <button type="submit" class="form-contacto__btn-enviar">Enviar</button>
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+            <button type="submit" class="formulario__btn">Enviar</button>
+            <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Formulario enviado exitosamente!</p>
+        </div>
   
 
     </form>
