@@ -76,7 +76,6 @@
 
     background-color: $colorPrimario;
     display: flex;
-/*     justify-content: space-around; */
 
     &__form-container {
         padding: 1em;
@@ -84,14 +83,9 @@
 
     &__logo-container {
         background-color: $colorPrimario;
-        /* margin-left: 15%; 
-        margin-right: 10%; */
-/*         height: auto; */
-/*         width: 200px; */
     }
 
     &__logo-container img{
-/*         padding-left: 10px; */
         height: auto;
         width: auto;
     }
@@ -101,17 +95,12 @@
         display: flex;
         flex-basis: 70%;
         justify-content: center;
-
-        & img{
-/*             color:red; */
-            width: 50px;
-        }
     }
 
     &__form-label {
        font-family: 'Oswald', sans-serif;
        text-transform: uppercase;
-       font-size: 20px;
+       font-size: 22px;
        font-weight: 400;
        background-color: $colorPrimario;
        color: $colorBase;
@@ -120,33 +109,35 @@
     &__form-search {
         background-color: $colorBase;
         width: 40%;
-        height: 30px;
-        border: 3px solid $colorSecundario;
+        height: 35px;
+        border: 1px solid $colorTipografia;
         border-radius: 50px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
         margin-left: 1em;
-        margin-right: 1em;
+        margin-right: 0;
     }
 
     &__form-submit {
-        background-color: $colorBase;
-        color: $colorTipografia;
-        font-family: 'Montserrat', sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        height: 30px;
-        border: 2px solid $colorTipografia;
+        background-color: $colorTerciario;
+        height: 35px;
+        border: 1px solid $colorTipografia;
         border-radius: 50px;
-        width: fit-content;
-        padding: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-left:0;
+        width: 70px;
+
+        & img {
+            height: 30px;
+        }
 
         &:hover{
-            background-color: $colorTipografia;
-            color: $colorBase;
-            border: 2px solid $colorBase;
+            background-color: $colorSecundario;
+            border: 2px solid $colorTipografia;
         }
 
     }
-
     &__carrito-container {
         display: flex;
         justify-content: center;
@@ -192,7 +183,7 @@
         &__form-container {
             justify-content: flex-end;
             align-items: center;
-            padding: 5px;
+            padding: 3px;
             font-weight: 100;
 
         }
@@ -200,14 +191,21 @@
         &__form-label {
            display: none;
         }
-    
+
         &__form-search {
-            width: 100%;
-            margin: 0.1em;
+            width:70px ;
+            height: 25px;
+            margin: 0;
         }
-    
+
         &__form-submit {
-            font-size: 12px;
+            
+            height: 25px;
+            width: 50px;
+    
+            & img {
+                height: 22px;
+            }
         }
     
         &__carrito-container {
@@ -247,6 +245,7 @@
         position: absolute;
         left: .5em;
         right: .5em;
+        border-radius: 50px;
     }
 
     &__top-bread {
