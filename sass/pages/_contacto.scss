@@ -49,9 +49,16 @@
         margin: 10px;
         margin-left: 8%;
         font-size: 20px;
-        font-weight: 700;
+        font-weight: 400;
     } 
 
+    & label:not(#motivo-label){
+        &::after {
+        content: ' *';
+        color: crimson;
+        }
+    }
+    
     &__motivo {
         & label{
             display: inline;

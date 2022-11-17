@@ -714,7 +714,11 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin: 10px;
   margin-left: 8%;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
+}
+.form-contacto label:not(#motivo-label)::after {
+  content: " *";
+  color: crimson;
 }
 .form-contacto__motivo label {
   display: inline;
@@ -996,8 +1000,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   width: 70vw;
   background-color: #D074FF;
   color: #141414;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
   padding-left: 5%;
 }
 .container-alta__form-alta input, .container-alta__form-alta label {
@@ -1007,6 +1011,18 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   font-size: 20px;
   font-weight: 400;
   width: 50vw;
+}
+.container-alta__form-alta label:not(#label-envio)::after {
+  content: " *";
+  color: crimson;
+}
+.container-alta__form-alta input {
+  border: 2px solid transparent;
+  border-bottom: 1px solid gray;
+}
+.container-alta__form-alta input:focus {
+  border-bottom: 3px solid #ED93EC;
+  outline: none;
 }
 .container-alta__form-alta #envio, .container-alta__form-alta #label-envio {
   margin: 0;
@@ -1042,10 +1058,10 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin-bottom: 20px;
 }
 .container-alta form div {
-  border: 1px solid white;
-  background-color: crimson;
-  color: white;
-  font-weight: 700;
+  border: none;
+  color: crimson;
+  background-color: white;
+  font-weight: 400;
   margin-left: 15%;
   padding: 5px;
   border-radius: 5px;
@@ -1097,7 +1113,10 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     margin-top: 5px;
     padding: 0;
   }
-  .container-alta button {
+  .container-alta form button {
+    margin: 10px;
+    margin-left: 30%;
+    margin-bottom: 15px;
     font-size: 20px;
   }
   .container-alta form div {
@@ -1106,23 +1125,24 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   }
   .container-alta th {
     font-size: 10px;
-    padding: 2px;
+    padding: 1px;
   }
   .container-alta td {
     padding: 0px;
-    font-size: 10px;
+    font-size: 9px;
+    text-align: center;
   }
   .container-alta td button {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     font-size: 8px;
-    padding: 1px;
-    margin: 2px;
+    padding: 0.5px;
+    margin: 1px;
   }
   .container-alta table {
-    width: 95vw;
-    margin: 1px;
+    max-width: 95vw;
+    margin: 0.5px;
     margin-bottom: 15px;
   }
 }

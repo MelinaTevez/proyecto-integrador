@@ -44,11 +44,10 @@
             width: 70vw;
             background-color: #D074FF;
             color: $colorTipografia;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
+            border-top-left-radius: 13px;
+            border-top-right-radius: 13px;
             padding-left: 5%;
         }
-
 
         & input, & label {
             display: block;
@@ -58,9 +57,25 @@
             font-weight: 400;
             width: 50vw;
 
-            
         }
-      
+        
+        & label:not(#label-envio){
+            &::after {
+            content: ' *';
+            color: crimson;
+            }
+        }
+
+        & input {
+            border: 2px solid transparent;
+            border-bottom: 1px solid gray;
+
+            &:focus{
+                border-bottom: 3px solid $colorTerciario;
+                outline: none;
+            }
+        }
+
         & #envio, #label-envio{
             margin: 0;
             margin-left: 13%;
@@ -69,12 +84,9 @@
             display: flex;
             flex-direction: row;
             width: 100px;
-            
         }
-
     }
 
-    
     button {
         display: block; 
         background-color: rgb(50, 190, 50);
@@ -98,26 +110,21 @@
         }
     }
 
-
     form button {
         margin-left: 40%;
         margin-bottom: 20px;
     }
-  
-    
 
     form div {
-        border: 1px solid white;
-        background-color: crimson;
-        color: white;
-        font-weight: 700;
+        border: none;
+        color: crimson;
+        background-color: white;
+        font-weight: 400;
         margin-left: 15%;
         padding: 5px;
         border-radius: 5px;
         display: none;
     }
-
-
 
     table,th, td {
         border: 1px solid $colorTipografia;
@@ -127,13 +134,14 @@
     th {
         font-size: larger;
     }
+
     td {
         padding: 5px;
-    }
 
-    td button {
-        width: auto;
-        font-size: 12px;
+        & button {
+            width: auto;
+            font-size: 12px;
+        }
     }
 
     table {
@@ -179,39 +187,41 @@
             
         }
 
-        & button{
+        & form button {
+            margin: 10px;
+            margin-left: 30%;
+            margin-bottom: 15px;
             font-size: 20px;
         }
 
         form div {
-    
             font-weight: 400;
             margin-left: 10px;
         }
 
         th {
             font-size: 10px;
-            padding: 2px;
+            padding: 1px;
         }
+
         td {
             padding: 0px;
-            font-size: 10px;
+            font-size: 9px;
+            text-align: center;
         }
     
         td button {
-            width: fit-content;
+            width:fit-content;
             font-size: 8px;
-            padding: 1px;
-            margin: 2px;
+            padding: 0.5px;
+            margin: 1px;
             
         }
     
         table {
-            width: 95vw;
-            margin: 1px;
+            max-width: 95vw;
+            margin: 0.5px;
             margin-bottom: 15px;
         }
-    
-        
     }
 }
