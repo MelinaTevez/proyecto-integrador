@@ -163,9 +163,8 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   padding-bottom: 3px;
   text-align: center;
   font-size: 25px;
-  background-color: #fff8f8;
+  background-color: #AD5ED6;
   color: #141414;
-  border-radius: 50%;
 }
 @media (max-width: 768px) {
   .search-bar {
@@ -264,15 +263,15 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   background-color: #fff8f8;
 }
 .section-cards__header {
-  background-image: url(../../img/otras-img/JUANAMARI.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 79vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  margin: 0%;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../img/otras-img/juana-mari-hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 80vh;
   text-transform: uppercase;
 }
 .section-cards__header h1 {
@@ -298,13 +297,13 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
 }
 @media (max-width: 768px) {
   .section-cards__header {
-    background-image: url(../../img/otras-img/Juana-Mari.png);
-    background-repeat: no-repeat;
-    background-position: center top;
-    height: 70vh;
-    width: auto;
-    margin: 0%;
-    padding: 0%;
+    /*  background-image: url(../../img/otras-img/Juana-Mari.png);
+     background-repeat: no-repeat;
+     background-position:center top;
+     height: 70vh;
+     width: auto;
+     margin: 0%;
+     padding: 0%; */
   }
   .section-cards__header h1 {
     font-size: 55px;
@@ -1251,37 +1250,23 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
   margin-left: 30%;
   margin-top: 10px;
 }
+.section-carrito h2, .section-carrito h3 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  color: #141414;
+  text-transform: uppercase;
+  text-align: center;
+}
 .section-carrito h2 {
-  text-transform: uppercase;
-  font-size: 38px;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  background-color: white;
-  color: #141414;
+  font-size: 40px;
   margin-top: 3%;
+  font-weight: 700;
 }
-.section-carrito h3, .section-carrito h4 {
-  text-transform: uppercase;
+.section-carrito h3 {
   font-size: 25px;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  background-color: white;
-  color: #141414;
   margin-top: 1%;
-}
-.section-carrito h4 {
-  margin-left: 50%;
-  padding: 10px;
-  background-color: white;
-  color: #141414;
-  margin-top: 1%;
-}
-.section-carrito .carrito-img {
-  width: 25%;
-  margin-left: 38%;
-  margin-top: 5%;
 }
 .section-carrito #carrito-enviado {
   color: #2ECC71;
@@ -1314,22 +1299,18 @@ $colorCuaternario: #F8D5F8;    (rosa claro) */
     padding: 1px;
   }
   .section-carrito .btn.btn__irAAgregarCarrito {
-    margin-left: 20%;
+    margin-left: 22%;
     margin-top: 5px;
   }
-  .section-carrito h2 {
-    font-size: 22px;
-    margin-top: 3%;
-  }
-  .section-carrito h3, .section-carrito h4 {
-    font-size: 20px;
+  .section-carrito h2, .section-carrito h3 {
     padding: 5px;
   }
-  .section-carrito h4 {
-    margin-left: 45%;
+  .section-carrito h2 {
+    font-size: 30px;
+    margin-top: 1%;
   }
-  .section-carrito .carrito-img {
-    display: none;
+  .section-carrito h3 {
+    font-size: 20px;
   }
 }
 

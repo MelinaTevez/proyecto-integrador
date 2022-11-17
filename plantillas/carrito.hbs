@@ -36,7 +36,6 @@
         </tr>
          {{/each}}
     </table>
-    <h4>Total $  </h4><p class="precio-total"></p>
 
     <div class="btn btn-carrito">
         <button class="btn btn__vaciarCarrito" onclick="carritoController.btnVaciarCarrito()" >Vaciar carrito</button>
@@ -46,5 +45,5 @@
     <button class="btn btn__cerrarCarrito" onclick="carritoController.btnCerrarCarrito()"><i class="fas fa-times-circle"></i></button>
     <h2>Oh no! </h2>
     <h3>Parece que tu carrito esta vacío, ve a agregar productos </h3>
-    <button class="btn btn__irAAgregarCarrito" onclick="carritoController.btnCerrarCarrito()">Ir a agregar productos</button>
+    <button class="btn btn__irAAgregarCarrito" onclick="carritoController.btnIrAAgregar()">Ir a agregar productos</button>
 {{/if}}

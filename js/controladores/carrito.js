@@ -28,6 +28,7 @@ class CarritoController extends CarritoModel {
         if(!this.elProductoEstaEnElCarrito(producto)) {
             producto.cantidad = 1
             this.carrito.push(producto)
+
         } else {
             const productoDeCarrito = this.obtenerProductoDeCarrito(producto)
             productoDeCarrito.cantidad++
@@ -47,7 +48,7 @@ class CarritoController extends CarritoModel {
         let cantidadDeProdEnCarrito = 0;
         
         carrito.forEach(producto => {
-            cantidadDeProdEnCarrito = cantidadDeProdEnCarrito+ producto.cantidad; 
+            cantidadDeProdEnCarrito = cantidadDeProdEnCarrito + producto.cantidad; 
         });
         
         carritoContador.innerHTML = cantidadDeProdEnCarrito;
@@ -86,6 +87,7 @@ class CarritoController extends CarritoModel {
             elemSectionCarrito.innerHTML = `
                 <button class="btn btn__cerrarCarrito" onclick="carritoController.btnCerrarCarrito()"><i class="fas fa-times-circle"></i></button>
                 <h2 id="carrito-enviado">El carrito fue enviado con éxito</h2> 
+                
                 `
             ;
               
@@ -99,17 +101,18 @@ class CarritoController extends CarritoModel {
     btnCerrarCarrito(){
         
         const elemSectionCarritoVisible = document.getElementsByClassName('section-carrito--visible')[0] 
-
         if (elemSectionCarritoVisible.className.includes('--visible')) elemSectionCarritoVisible.classList.remove('section-carrito--visible')
         mostrarCarrito = false;
     }
     
     btnVaciarCarrito(){
-        this.carrito.length = []
+        this.carrito.length = 0
+        localStorage.setItem('carrito', JSON.stringify(this.carrito))
         renderTablaCarrito(this.carrito)
     }
-
-
+    btnIrAAgregar(){
+        this.btnCerrarCarrito()
+    }
  
 }
 
